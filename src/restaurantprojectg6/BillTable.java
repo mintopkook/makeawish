@@ -176,6 +176,11 @@ public class BillTable extends javax.swing.JFrame {
                 Table1MouseClicked(evt);
             }
         });
+        Table1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Table1ActionPerformed(evt);
+            }
+        });
 
         Table12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
         Table12.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -593,6 +598,10 @@ public class BillTable extends javax.swing.JFrame {
     private void doneButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_doneButtonActionPerformed
         this.setVisible(false);
     }//GEN-LAST:event_doneButtonActionPerformed
+
+    private void Table1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Table1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Table1ActionPerformed
 
     /**
      * @param args the command line arguments

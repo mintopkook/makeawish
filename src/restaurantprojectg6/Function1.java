@@ -69,6 +69,11 @@ public class Function1 extends javax.swing.JFrame {
         });
 
         backlog.setText("Backlog");
+        backlog.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backlogActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -111,6 +116,12 @@ public class Function1 extends javax.swing.JFrame {
         Billing1 b = new Billing1();
         b.setVisible(true);
     }//GEN-LAST:event_billingActionPerformed
+
+    private void backlogActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backlogActionPerformed
+        dispose();
+        BackLog blg = new BackLog();
+        blg.setVisible(true);
+    }//GEN-LAST:event_backlogActionPerformed
 
     /**
      * @param args the command line arguments
