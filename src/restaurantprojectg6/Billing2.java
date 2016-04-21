@@ -104,11 +104,11 @@ public class Billing2 extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
                     .addComponent(customerName, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(41, 41, 41)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
                     .addComponent(tableNo))
                 .addGap(38, 38, 38)
@@ -126,9 +126,11 @@ public class Billing2 extends javax.swing.JFrame {
         String sql = "UPDATE RESTAURANT_Table SET cost = 0 WHERE RESTAURANT_Table.No = " + tableNum;
         String sql2 = "UPDATE RESTAURANT_Table SET isEmpty = '" + true + "' WHERE RESTAURANT_Table.No = " + tableNum;
         String sql3 = "UPDATE RESTAURANT_CustomerInfo SET TableNo = 0 WHERE RESTAURANT_CustomerInfo.TableNo = " + tableNum;
+        String sql4 = "UPDATE RESTAURANT_CustomerInfo SET TableNo = 0 WHERE RESTAURANT_CustomerInfo.TableNo = " + tableNum;
         db.executeQuery(sql);
         db.executeQuery(sql2);
         db.executeQuery(sql3);
+        db.executeQuery(sql4);
         db.disconnect();
     }//GEN-LAST:event_billButtonActionPerformed
 
