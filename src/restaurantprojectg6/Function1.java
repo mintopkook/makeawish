@@ -58,6 +58,7 @@ public class Function1 extends javax.swing.JFrame {
 
         jButton2.setBackground(new java.awt.Color(204, 150, 138));
         jButton2.setFont(new java.awt.Font("Bangna New", 1, 14)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(240, 240, 240));
         jButton2.setText("Queuing");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -67,6 +68,7 @@ public class Function1 extends javax.swing.JFrame {
 
         billing.setBackground(new java.awt.Color(204, 150, 138));
         billing.setFont(new java.awt.Font("Bangna New", 1, 14)); // NOI18N
+        billing.setForeground(new java.awt.Color(240, 240, 240));
         billing.setText("Billing");
         billing.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -76,6 +78,7 @@ public class Function1 extends javax.swing.JFrame {
 
         backlog.setBackground(new java.awt.Color(204, 150, 138));
         backlog.setFont(new java.awt.Font("Bangna New", 1, 14)); // NOI18N
+        backlog.setForeground(new java.awt.Color(240, 240, 240));
         backlog.setText("Backlog");
         backlog.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
