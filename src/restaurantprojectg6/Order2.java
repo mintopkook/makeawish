@@ -56,7 +56,7 @@ public class Order2 extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        coke.setIcon(new javax.swing.ImageIcon("C:\\Users\\JamesP\\Documents\\NetBeansProjects\\RestaurantProjectG6\\src\\restaurantprojectg6\\coke.png")); // NOI18N
+        coke.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/coke.png"))); // NOI18N
         coke.setText("Coke");
         coke.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -64,7 +64,7 @@ public class Order2 extends javax.swing.JFrame {
             }
         });
 
-        pepsi.setIcon(new javax.swing.ImageIcon("C:\\Users\\JamesP\\Documents\\NetBeansProjects\\RestaurantProjectG6\\src\\restaurantprojectg6\\Pepsi.png")); // NOI18N
+        pepsi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Pepsi.png"))); // NOI18N
         pepsi.setText("pepsi");
         pepsi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -72,7 +72,7 @@ public class Order2 extends javax.swing.JFrame {
             }
         });
 
-        cake.setIcon(new javax.swing.ImageIcon("C:\\Users\\JamesP\\Documents\\NetBeansProjects\\RestaurantProjectG6\\src\\restaurantprojectg6\\cake.png")); // NOI18N
+        cake.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/cake.png"))); // NOI18N
         cake.setText("cake");
         cake.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,7 +80,7 @@ public class Order2 extends javax.swing.JFrame {
             }
         });
 
-        cupcake.setIcon(new javax.swing.ImageIcon("C:\\Users\\JamesP\\Documents\\NetBeansProjects\\RestaurantProjectG6\\src\\restaurantprojectg6\\cupcake.png")); // NOI18N
+        cupcake.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/cupcake.png"))); // NOI18N
         cupcake.setText("cupcake");
         cupcake.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -88,7 +88,7 @@ public class Order2 extends javax.swing.JFrame {
             }
         });
 
-        spaghetti.setIcon(new javax.swing.ImageIcon("C:\\Users\\JamesP\\Documents\\NetBeansProjects\\RestaurantProjectG6\\src\\restaurantprojectg6\\pasta.png")); // NOI18N
+        spaghetti.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/pasta.png"))); // NOI18N
         spaghetti.setText(" Spaghetti");
         spaghetti.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,7 +96,7 @@ public class Order2 extends javax.swing.JFrame {
             }
         });
 
-        ramen.setIcon(new javax.swing.ImageIcon("C:\\Users\\JamesP\\Documents\\NetBeansProjects\\RestaurantProjectG6\\src\\restaurantprojectg6\\Ramen.png")); // NOI18N
+        ramen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Ramen.png"))); // NOI18N
         ramen.setText("Ramen");
         ramen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -159,11 +159,11 @@ public class Order2 extends javax.swing.JFrame {
                                     .addComponent(cake, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(pepsi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(spaghetti, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(cupcake, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addComponent(cupcake, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(pepsi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addComponent(tableLabel))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 157, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(clear, javax.swing.GroupLayout.Alignment.TRAILING)

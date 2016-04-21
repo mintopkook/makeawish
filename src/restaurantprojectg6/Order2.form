@@ -41,14 +41,14 @@
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="pepsi" max="32767" attributes="0"/>
                                   <Component id="spaghetti" max="32767" attributes="0"/>
                                   <Component id="cupcake" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="pepsi" alignment="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <Component id="tableLabel" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="157" max="32767" attributes="0"/>
+                      <EmptySpace pref="89" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jScrollPane1" alignment="1" min="-2" pref="310" max="-2" attributes="0"/>
                           <Component id="clear" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -112,7 +112,7 @@
     <Component class="javax.swing.JButton" name="coke">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\JamesP\Documents\NetBeansProjects\RestaurantProjectG6\src\restaurantprojectg6\coke.png"/>
+          <Image iconType="3" name="/restaurantprojectg6/coke.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Coke"/>
       </Properties>
@@ -123,7 +123,7 @@
     <Component class="javax.swing.JButton" name="pepsi">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\JamesP\Documents\NetBeansProjects\RestaurantProjectG6\src\restaurantprojectg6\Pepsi.png"/>
+          <Image iconType="3" name="/restaurantprojectg6/Pepsi.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="pepsi"/>
       </Properties>
@@ -134,7 +134,7 @@
     <Component class="javax.swing.JButton" name="cake">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\JamesP\Documents\NetBeansProjects\RestaurantProjectG6\src\restaurantprojectg6\cake.png"/>
+          <Image iconType="3" name="/restaurantprojectg6/cake.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="cake"/>
       </Properties>
@@ -145,7 +145,7 @@
     <Component class="javax.swing.JButton" name="cupcake">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\JamesP\Documents\NetBeansProjects\RestaurantProjectG6\src\restaurantprojectg6\cupcake.png"/>
+          <Image iconType="3" name="/restaurantprojectg6/cupcake.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="cupcake"/>
       </Properties>
@@ -156,7 +156,7 @@
     <Component class="javax.swing.JButton" name="spaghetti">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\JamesP\Documents\NetBeansProjects\RestaurantProjectG6\src\restaurantprojectg6\pasta.png"/>
+          <Image iconType="3" name="/restaurantprojectg6/pasta.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value=" Spaghetti"/>
       </Properties>
@@ -167,7 +167,7 @@
     <Component class="javax.swing.JButton" name="ramen">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\JamesP\Documents\NetBeansProjects\RestaurantProjectG6\src\restaurantprojectg6\Ramen.png"/>
+          <Image iconType="3" name="/restaurantprojectg6/Ramen.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Ramen"/>
       </Properties>
