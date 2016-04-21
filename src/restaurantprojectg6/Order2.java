@@ -132,7 +132,7 @@ public class Order2 extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("TH Charm of AU", 0, 48)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Bangna New", 0, 48)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Order");
         jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
