@@ -90,15 +90,15 @@ ResultSet rs=null;
     }//GEN-LAST:event_txtpasswordActionPerformed
 
     private void LoginButtomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginButtomActionPerformed
-    Conn=MysqlConnect.ConnectDB();
+    conn = MysqlConnect.ConnectDB();
     String Sql="Select * from login where username=? and password=?";
     try{
         pst=conn.prepareStatement(Sql);
-        pst.setString(1, txtpassword.getText);
+        pst.setString(1, txtpassword.getText());
         rs=pst.executeQuery();
         if(rs.next()){
             JOptionPane.showMessageDialog(null, "Welcome user");
-            welcome w=new welcome();
+            Welcome w=new Welcome();
             w.setVisible(true);       
         }
         else{
