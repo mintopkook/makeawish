@@ -29,11 +29,12 @@ public class Function1 extends javax.swing.JFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jLabel1 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         billing = new javax.swing.JButton();
         backlog = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -51,14 +52,6 @@ public class Function1 extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Bangna New", 0, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(204, 150, 138));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText(" Management System");
-        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(111, 64, 423, 52);
-
         jButton2.setBackground(new java.awt.Color(204, 150, 138));
         jButton2.setFont(new java.awt.Font("Bangna New", 1, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(240, 240, 240));
@@ -69,7 +62,7 @@ public class Function1 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(175, 139, 285, 50);
+        jButton2.setBounds(330, 70, 285, 50);
 
         billing.setBackground(new java.awt.Color(204, 150, 138));
         billing.setFont(new java.awt.Font("Bangna New", 1, 14)); // NOI18N
@@ -81,7 +74,7 @@ public class Function1 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(billing);
-        billing.setBounds(175, 207, 285, 50);
+        billing.setBounds(330, 150, 285, 50);
 
         backlog.setBackground(new java.awt.Color(204, 150, 138));
         backlog.setFont(new java.awt.Font("Bangna New", 1, 14)); // NOI18N
@@ -93,15 +86,23 @@ public class Function1 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(backlog);
-        backlog.setBounds(175, 275, 285, 50);
+        backlog.setBounds(330, 230, 285, 50);
 
-        jLabel2.setFont(new java.awt.Font("Bangna New", 0, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(204, 150, 138));
+        jLabel1.setText("Make a wish ");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(20, 90, 290, 80);
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(204, 150, 138));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Make a Wish Restaurant");
-        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jLabel2.setText("Restaurant system management");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(88, 21, 482, 37);
+        jLabel2.setBounds(20, 130, 360, 80);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/pasta.png"))); // NOI18N
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(120, 190, 80, 80);
 
         setBounds(0, 0, 657, 411);
     }// </editor-fold>//GEN-END:initComponents
@@ -165,6 +166,7 @@ public class Function1 extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
