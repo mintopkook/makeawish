@@ -92,13 +92,13 @@ public class Function1 extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(204, 150, 138));
         jLabel1.setText("Make a wish ");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(20, 90, 290, 80);
+        jLabel1.setBounds(30, 90, 290, 80);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(204, 150, 138));
         jLabel2.setText("Restaurant system management");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(20, 130, 360, 80);
+        jLabel2.setBounds(30, 130, 360, 80);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/pasta.png"))); // NOI18N
         getContentPane().add(jLabel3);
