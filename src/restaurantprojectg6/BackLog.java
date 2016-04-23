@@ -29,9 +29,10 @@ public class BackLog extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         noCustomer = new javax.swing.JLabel();
-        revenue = new javax.swing.JLabel();
         popFood = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        DoneButtom1 = new javax.swing.JButton();
+        NumCustxt2 = new javax.swing.JTextField();
+        NumCusTxt1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 204, 204));
@@ -43,21 +44,29 @@ public class BackLog extends javax.swing.JFrame {
         noCustomer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/GFood.png"))); // NOI18N
         noCustomer.setText("Number of Customer");
 
-        revenue.setFont(new java.awt.Font("Bangna New", 0, 18)); // NOI18N
-        revenue.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/GMoney.png"))); // NOI18N
-        revenue.setText("Revenue");
-
         popFood.setFont(new java.awt.Font("Bangna New", 0, 18)); // NOI18N
-        popFood.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/GFood.png"))); // NOI18N
+        popFood.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/GMoney.png"))); // NOI18N
         popFood.setText("Popular Food");
         popFood.setToolTipText("");
 
-        jButton1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/cone.png"))); // NOI18N
-        jButton1.setText("DONE");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        DoneButtom1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        DoneButtom1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/cone.png"))); // NOI18N
+        DoneButtom1.setText("BACK");
+        DoneButtom1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                DoneButtom1ActionPerformed(evt);
+            }
+        });
+
+        NumCustxt2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NumCustxt2ActionPerformed(evt);
+            }
+        });
+
+        NumCusTxt1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NumCusTxt1ActionPerformed(evt);
             }
         });
 
@@ -66,44 +75,63 @@ public class BackLog extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(144, 144, 144)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(132, 132, 132)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(popFood)
-                                .addComponent(revenue, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(noCustomer, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(152, 152, 152)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(127, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(DoneButtom1, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(144, 144, 144)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(64, 64, 64)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(noCustomer, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(popFood)))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                .addComponent(NumCustxt2, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(41, 41, 41))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addContainerGap(396, Short.MAX_VALUE)
+                    .addComponent(NumCusTxt1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(42, 42, 42)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(42, 42, 42)
                 .addComponent(noCustomer, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24)
-                .addComponent(revenue)
-                .addGap(38, 38, 38)
-                .addComponent(popFood)
-                .addGap(37, 37, 37)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addGap(69, 69, 69)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(popFood)
+                    .addComponent(NumCustxt2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(51, 51, 51)
+                .addComponent(DoneButtom1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(39, 39, 39))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(159, 159, 159)
+                    .addComponent(NumCusTxt1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(325, Short.MAX_VALUE)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void DoneButtom1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DoneButtom1ActionPerformed
+        dispose();
+        Function1 f = new Function1();
+        f.setVisible(true);
+    }//GEN-LAST:event_DoneButtom1ActionPerformed
+
+    private void NumCustxt2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumCustxt2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_NumCustxt2ActionPerformed
+
+    private void NumCusTxt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumCusTxt1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NumCusTxt1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -121,10 +149,11 @@ public class BackLog extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton DoneButtom1;
+    private javax.swing.JTextField NumCusTxt1;
+    private javax.swing.JTextField NumCustxt2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel noCustomer;
     private javax.swing.JLabel popFood;
-    private javax.swing.JLabel revenue;
     // End of variables declaration//GEN-END:variables
 }
