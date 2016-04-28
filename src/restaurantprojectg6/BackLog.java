@@ -16,6 +16,7 @@ public class BackLog extends javax.swing.JFrame {
      */
     public BackLog() {
         initComponents();
+        setSize(800,600);
     }
 
     /**
@@ -36,6 +37,7 @@ public class BackLog extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 204, 204));
+        setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Bangna New", 1, 48)); // NOI18N
         jLabel1.setText("Backlog");

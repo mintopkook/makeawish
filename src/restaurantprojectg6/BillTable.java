@@ -30,6 +30,7 @@ public class BillTable extends javax.swing.JFrame {
     public BillTable() {
         initComponents();
         updateTable();
+        setSize(800,600);
     }
     
     public void updateTable(){
@@ -148,6 +149,7 @@ public class BillTable extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         Table3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
         Table3.addMouseListener(new java.awt.event.MouseAdapter() {

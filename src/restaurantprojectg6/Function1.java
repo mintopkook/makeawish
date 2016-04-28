@@ -16,6 +16,7 @@ public class Function1 extends javax.swing.JFrame {
      */
     public Function1() {
         initComponents();
+        setSize(800,600);
     }
 
     /**
@@ -50,6 +51,7 @@ public class Function1 extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTable1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(null);
 
         jButton2.setBackground(new java.awt.Color(204, 150, 138));

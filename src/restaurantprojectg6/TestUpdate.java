@@ -19,6 +19,7 @@ public class TestUpdate extends javax.swing.JFrame {
      */
     public TestUpdate() {
         initComponents();
+        setSize(800,600);
     }
 
     /**
@@ -36,6 +37,7 @@ public class TestUpdate extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(null);
         getContentPane().add(rename);
         rename.setBounds(77, 151, 335, 20);

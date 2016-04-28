@@ -27,6 +27,7 @@ public class Table extends javax.swing.JFrame {
     public Table() {
         initComponents();
         updateTable();
+        setSize(800,600);
     }
     
     /**
@@ -156,6 +157,7 @@ public class Table extends javax.swing.JFrame {
         jMenuItem1.setText("jMenuItem1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jPanel1.setLayout(null);
 

@@ -23,6 +23,7 @@ public class Queue1 extends javax.swing.JFrame {
     public Table t = new Table();
     public Queue1() {
         initComponents();
+        setSize(800,600);
     }
 
     /**
@@ -47,6 +48,7 @@ public class Queue1 extends javax.swing.JFrame {
         chooseTable = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("TH Charm of AU", 0, 36)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

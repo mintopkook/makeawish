@@ -16,6 +16,7 @@ public class Billing1 extends javax.swing.JFrame {
      */
     public Billing1() {
         initComponents();
+        setSize(800,600);
     }
 
     /**
@@ -31,6 +32,7 @@ public class Billing1 extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Bangna New", 1, 36)); // NOI18N
         jLabel1.setText("Billing");

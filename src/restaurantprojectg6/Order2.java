@@ -27,6 +27,7 @@ public class Order2 extends javax.swing.JFrame {
     
     public Order2() {
         initComponents();
+        setSize(800,600);
         tableLabel.setText("Table " + q.getTable().getCurrentTable());
     }
 
@@ -55,6 +56,7 @@ public class Order2 extends javax.swing.JFrame {
         tableLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         coke.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/coke.png"))); // NOI18N
         coke.setText("Coke");
