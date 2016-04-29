@@ -62,7 +62,7 @@ public class Order2 extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         coke.setFont(new java.awt.Font("Lucida Grande", 0, 16)); // NOI18N
-        coke.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/12687.png"))); // NOI18N
+        coke.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/water.png"))); // NOI18N
         coke.setText("Coke");
         coke.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -72,7 +72,7 @@ public class Order2 extends javax.swing.JFrame {
         getContentPane().add(coke, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 490, 150, 70));
 
         pepsi.setFont(new java.awt.Font("Lucida Grande", 0, 16)); // NOI18N
-        pepsi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/12687.png"))); // NOI18N
+        pepsi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/water.png"))); // NOI18N
         pepsi.setText("Pepsi");
         pepsi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -162,7 +162,7 @@ public class Order2 extends javax.swing.JFrame {
         jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 30, 210, 60));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/14309876301083205889speech-bubble.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/head1.png"))); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 20, 560, 80));
 
         tableLabel.setFont(new java.awt.Font("Lucida Fax", 0, 18)); // NOI18N
