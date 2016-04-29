@@ -185,7 +185,7 @@ public class Queue1 extends javax.swing.JFrame {
     }//GEN-LAST:event_ContinueButtonMouseClicked
 
     private void ContinueButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContinueButtonActionPerformed
-        CSDbDelegate db = new CSDbDelegate("cs14sitkmutt.me", "3306", "CSC105_G6", "CSC105_G6", "CSC105_G6");
+        CSDbDelegate db = new CSDbDelegate("csprog-in.sit.kmutt.ac.th", "3306", "CSC105_G6", "csc105_2014", "csc105");
         System.out.println(db.connect());
         //Create variable to get the data from text fields
         String name = customerName.getText();

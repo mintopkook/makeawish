@@ -25,7 +25,7 @@ public class BillTable extends javax.swing.JFrame {
     public static int currentTable;
     String[] tableE = new String[12];
     int tableNo;
-    static CSDbDelegate db = new CSDbDelegate("cs14sitkmutt.me","3306","CSC105_G6","CSC105_G6","CSC105_G6");
+    static CSDbDelegate db = new CSDbDelegate("csprog-in.sit.kmutt.ac.th", "3306", "CSC105_G6", "csc105_2014", "csc105");
     
     public BillTable() {
         initComponents();
