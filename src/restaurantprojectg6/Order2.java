@@ -53,58 +53,72 @@ public class Order2 extends javax.swing.JFrame {
         back = new javax.swing.JButton();
         doneButton = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         tableLabel = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        coke.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/coke.png"))); // NOI18N
+        coke.setFont(new java.awt.Font("Lucida Grande", 0, 16)); // NOI18N
+        coke.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/12687.png"))); // NOI18N
         coke.setText("Coke");
         coke.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cokeActionPerformed(evt);
             }
         });
+        getContentPane().add(coke, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 490, 150, 70));
 
-        pepsi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Pepsi.png"))); // NOI18N
-        pepsi.setText("pepsi");
+        pepsi.setFont(new java.awt.Font("Lucida Grande", 0, 16)); // NOI18N
+        pepsi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/12687.png"))); // NOI18N
+        pepsi.setText("Pepsi");
         pepsi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pepsiActionPerformed(evt);
             }
         });
+        getContentPane().add(pepsi, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 410, 150, -1));
 
-        cake.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/cake.png"))); // NOI18N
+        cake.setFont(new java.awt.Font("Lucida Grande", 0, 16)); // NOI18N
+        cake.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/cake_A-512.png"))); // NOI18N
         cake.setText("cake");
         cake.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cakeActionPerformed(evt);
             }
         });
+        getContentPane().add(cake, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 410, 160, -1));
 
-        cupcake.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/cupcake.png"))); // NOI18N
+        cupcake.setFont(new java.awt.Font("Lucida Grande", 0, 16)); // NOI18N
+        cupcake.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/cupp.png"))); // NOI18N
         cupcake.setText("cupcake");
         cupcake.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cupcakeActionPerformed(evt);
             }
         });
+        getContentPane().add(cupcake, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 490, 160, 70));
 
-        spaghetti.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/pasta.png"))); // NOI18N
+        spaghetti.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/spa.png"))); // NOI18N
         spaghetti.setText(" Spaghetti");
         spaghetti.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 spaghettiActionPerformed(evt);
             }
         });
+        getContentPane().add(spaghetti, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 490, 140, 70));
 
-        ramen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Ramen.png"))); // NOI18N
+        ramen.setFont(new java.awt.Font("Lucida Grande", 0, 16)); // NOI18N
+        ramen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/noodle.png"))); // NOI18N
         ramen.setText("Ramen");
         ramen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ramenActionPerformed(evt);
             }
         });
+        getContentPane().add(ramen, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, 140, -1));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -116,16 +130,23 @@ public class Order2 extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 140, 400, 220));
+
         clear.setText("Clear");
         clear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 clearActionPerformed(evt);
             }
         });
+        getContentPane().add(clear, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 490, -1, -1));
 
+        priceLabel.setFont(new java.awt.Font("Lucida Sans Unicode", 0, 18)); // NOI18N
+        priceLabel.setForeground(new java.awt.Color(255, 255, 204));
         priceLabel.setText("Total price: ");
+        getContentPane().add(priceLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 360, 153, -1));
 
         back.setText("Back");
+        getContentPane().add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 560, -1, -1));
 
         doneButton.setText("Done");
         doneButton.addActionListener(new java.awt.event.ActionListener() {
@@ -133,82 +154,24 @@ public class Order2 extends javax.swing.JFrame {
                 doneButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(doneButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 530, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("Bangna New", 0, 48)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("#TS  Malee Normal", 0, 55)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Order");
+        jLabel2.setText("ORDER");
         jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 30, 210, 60));
 
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/14309876301083205889speech-bubble.png"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 20, 560, 80));
+
+        tableLabel.setFont(new java.awt.Font("Lucida Fax", 0, 18)); // NOI18N
+        tableLabel.setForeground(new java.awt.Color(255, 255, 204));
         tableLabel.setText("Table: ");
+        getContentPane().add(tableLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 150, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(back)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(doneButton))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(coke, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(ramen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(cake, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(spaghetti, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(cupcake, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(pepsi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addComponent(tableLabel))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(clear, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(priceLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(32, 32, 32))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(334, 334, 334)
-                .addComponent(jLabel2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2)
-                .addGap(16, 16, 16)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(9, 9, 9)
-                        .addComponent(priceLabel)
-                        .addGap(18, 18, 18)
-                        .addComponent(clear))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(tableLabel)
-                        .addGap(44, 44, 44)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(pepsi, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(coke, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(cupcake)
-                            .addComponent(cake, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(ramen, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(spaghetti, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(back)
-                    .addComponent(doneButton))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/bg2.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 940, 620));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -398,7 +361,9 @@ public class Order2 extends javax.swing.JFrame {
     private javax.swing.JButton coke;
     private javax.swing.JButton cupcake;
     private javax.swing.JButton doneButton;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JButton pepsi;
