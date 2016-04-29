@@ -28,95 +28,68 @@ public class BackLog extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
         noCustomer = new javax.swing.JLabel();
         popFood = new javax.swing.JLabel();
         DoneButtom1 = new javax.swing.JButton();
         NumCustxt2 = new javax.swing.JTextField();
         NumCusTxt1 = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 204, 204));
         setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Bangna New", 1, 48)); // NOI18N
-        jLabel1.setText("Backlog");
-
-        noCustomer.setFont(new java.awt.Font("Bangna New", 0, 18)); // NOI18N
-        noCustomer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/GFood.png"))); // NOI18N
+        noCustomer.setFont(new java.awt.Font("# BANGLIKOSANA@THAIVI", 0, 36)); // NOI18N
+        noCustomer.setForeground(new java.awt.Color(255, 255, 0));
+        noCustomer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/golden_star.png"))); // NOI18N
         noCustomer.setText("Number of Customer");
+        getContentPane().add(noCustomer, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 200, 380, 70));
 
-        popFood.setFont(new java.awt.Font("Bangna New", 0, 18)); // NOI18N
-        popFood.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/GMoney.png"))); // NOI18N
+        popFood.setFont(new java.awt.Font("# BANGLIKOSANA@THAIVI", 0, 36)); // NOI18N
+        popFood.setForeground(new java.awt.Color(255, 204, 0));
+        popFood.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/golden_star.png"))); // NOI18N
         popFood.setText("Popular Food");
         popFood.setToolTipText("");
+        getContentPane().add(popFood, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 370, -1, -1));
 
-        DoneButtom1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
-        DoneButtom1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/cone.png"))); // NOI18N
+        DoneButtom1.setBackground(new java.awt.Color(255, 255, 255));
+        DoneButtom1.setFont(new java.awt.Font("Adobe Caslon Pro", 1, 18)); // NOI18N
         DoneButtom1.setText("BACK");
         DoneButtom1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DoneButtom1ActionPerformed(evt);
             }
         });
+        getContentPane().add(DoneButtom1, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 540, 90, 40));
 
         NumCustxt2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NumCustxt2ActionPerformed(evt);
             }
         });
+        getContentPane().add(NumCustxt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 430, 300, 50));
 
         NumCusTxt1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NumCusTxt1ActionPerformed(evt);
             }
         });
+        getContentPane().add(NumCusTxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 290, 300, 50));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(DoneButtom1, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(144, 144, 144)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(64, 64, 64)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(noCustomer, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(popFood)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
-                .addComponent(NumCustxt2, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(396, Short.MAX_VALUE)
-                    .addComponent(NumCusTxt1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(42, 42, 42)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(42, 42, 42)
-                .addComponent(noCustomer, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(69, 69, 69)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(popFood)
-                    .addComponent(NumCustxt2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(51, 51, 51)
-                .addComponent(DoneButtom1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(39, 39, 39))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(159, 159, 159)
-                    .addComponent(NumCusTxt1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(325, Short.MAX_VALUE)))
-        );
+        jLabel1.setFont(new java.awt.Font("#TS  Malee Normal", 1, 55)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 204));
+        jLabel1.setText("BACKLOG");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 60, 260, 61));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/14309876301083205889speech-bubble.png"))); // NOI18N
+        jLabel3.setText("jLabel3");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 550, 80));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/bg2.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 870, 600));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -155,6 +128,8 @@ public class BackLog extends javax.swing.JFrame {
     private javax.swing.JTextField NumCusTxt1;
     private javax.swing.JTextField NumCustxt2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel noCustomer;
     private javax.swing.JLabel popFood;
     // End of variables declaration//GEN-END:variables
