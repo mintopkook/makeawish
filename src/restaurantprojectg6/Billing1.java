@@ -5,6 +5,8 @@
  */
 package restaurantprojectg6;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author pim
@@ -30,12 +32,19 @@ public class Billing1 extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        DoneButtom1 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(790, 600));
+        setPreferredSize(new java.awt.Dimension(790, 600));
         setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Bangna New", 1, 36)); // NOI18N
-        jLabel1.setText("Billing");
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Billing_logo.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 750, 190));
 
         jButton1.setBackground(new java.awt.Color(204, 150, 138));
         jButton1.setFont(new java.awt.Font("Bangna New", 1, 18)); // NOI18N
@@ -46,30 +55,26 @@ public class Billing1 extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 260, 189, 74));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(167, 167, 167)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(204, 204, 204)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(190, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(95, 95, 95)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(179, Short.MAX_VALUE))
-        );
+        DoneButtom1.setBackground(new java.awt.Color(255, 255, 255));
+        DoneButtom1.setFont(new java.awt.Font("Adobe Caslon Pro", 1, 18)); // NOI18N
+        DoneButtom1.setText("BACK");
+        DoneButtom1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DoneButtom1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(DoneButtom1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 370, 90, 40));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/icon-billing.png"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 200, 230, 230));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/bg.png"))); // NOI18N
+        jLabel2.setMaximumSize(new java.awt.Dimension(896, 600));
+        jLabel2.setMinimumSize(new java.awt.Dimension(896, 600));
+        jLabel2.setPreferredSize(new java.awt.Dimension(896, 600));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -79,6 +84,14 @@ public class Billing1 extends javax.swing.JFrame {
         BillTable bt = new BillTable();
         bt.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void DoneButtom1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DoneButtom1ActionPerformed
+        dispose();
+        Function1 f = new Function1();
+        f.setVisible(true);
+        
+        JOptionPane.showMessageDialog(this, "Welcome to Make a Wish system");
+    }//GEN-LAST:event_DoneButtom1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -117,7 +130,10 @@ public class Billing1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton DoneButtom1;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 }
