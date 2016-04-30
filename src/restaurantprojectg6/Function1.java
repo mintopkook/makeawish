@@ -59,16 +59,16 @@ public class Function1 extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("MV Boli", 0, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel1.setText("Make a wish ");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 320, 70));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/makeawish_logo.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 340, 80));
 
         jLabel2.setFont(new java.awt.Font("Gabriola", 0, 36)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 51, 51));
         jLabel2.setText("Restaurant system management");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 100, 360, 80));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 80, 360, 80));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/pasta.png"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 270, 80, 80));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/waitress.png"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 210, 210, 300));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 204));
         jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -77,7 +77,7 @@ public class Function1 extends javax.swing.JFrame {
 
         jButton2.setBackground(new java.awt.Color(255, 204, 153));
         jButton2.setFont(new java.awt.Font("Gabriola", 1, 36)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(204, 204, 0));
+        jButton2.setForeground(new java.awt.Color(51, 51, 51));
         jButton2.setText("Queuing");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -88,7 +88,7 @@ public class Function1 extends javax.swing.JFrame {
 
         billing.setBackground(new java.awt.Color(255, 255, 153));
         billing.setFont(new java.awt.Font("Gabriola", 1, 36)); // NOI18N
-        billing.setForeground(new java.awt.Color(204, 204, 0));
+        billing.setForeground(new java.awt.Color(51, 51, 51));
         billing.setText("Billing");
         billing.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -99,7 +99,7 @@ public class Function1 extends javax.swing.JFrame {
 
         backlog.setBackground(new java.awt.Color(255, 204, 153));
         backlog.setFont(new java.awt.Font("Gabriola", 1, 36)); // NOI18N
-        backlog.setForeground(new java.awt.Color(204, 204, 0));
+        backlog.setForeground(new java.awt.Color(51, 51, 51));
         backlog.setText("Backlog");
         backlog.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
