@@ -30,7 +30,7 @@ public class BackLog extends javax.swing.JFrame {
 
         noCustomer = new javax.swing.JLabel();
         popFood = new javax.swing.JLabel();
-        DoneButtom1 = new javax.swing.JButton();
+        DoneButtom2 = new javax.swing.JButton();
         NumCustxt2 = new javax.swing.JTextField();
         NumCusTxt1 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
@@ -42,51 +42,50 @@ public class BackLog extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        noCustomer.setFont(new java.awt.Font("# BANGLIKOSANA@THAIVI", 0, 36)); // NOI18N
-        noCustomer.setForeground(new java.awt.Color(255, 255, 0));
+        noCustomer.setFont(new java.awt.Font("#TS  Malee Normal", 0, 36)); // NOI18N
+        noCustomer.setForeground(new java.awt.Color(224, 224, 55));
         noCustomer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/golden_star.png"))); // NOI18N
         noCustomer.setText("Number of Customer");
-        getContentPane().add(noCustomer, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 200, 380, 70));
+        getContentPane().add(noCustomer, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, 380, 70));
 
-        popFood.setFont(new java.awt.Font("# BANGLIKOSANA@THAIVI", 0, 36)); // NOI18N
-        popFood.setForeground(new java.awt.Color(255, 204, 0));
+        popFood.setFont(new java.awt.Font("#TS  Malee Normal", 0, 36)); // NOI18N
+        popFood.setForeground(new java.awt.Color(224, 224, 55));
         popFood.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/golden_star.png"))); // NOI18N
         popFood.setText("Popular Food");
         popFood.setToolTipText("");
-        getContentPane().add(popFood, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 370, -1, -1));
+        getContentPane().add(popFood, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, -1, -1));
 
-        DoneButtom1.setBackground(new java.awt.Color(255, 255, 255));
-        DoneButtom1.setFont(new java.awt.Font("Adobe Caslon Pro", 1, 18)); // NOI18N
-        DoneButtom1.setText("BACK");
-        DoneButtom1.addActionListener(new java.awt.event.ActionListener() {
+        DoneButtom2.setBackground(new java.awt.Color(255, 255, 255));
+        DoneButtom2.setFont(new java.awt.Font("Adobe Caslon Pro", 1, 18)); // NOI18N
+        DoneButtom2.setText("BACK");
+        DoneButtom2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DoneButtom1ActionPerformed(evt);
+                DoneButtom2ActionPerformed(evt);
             }
         });
-        getContentPane().add(DoneButtom1, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 540, 90, 40));
+        getContentPane().add(DoneButtom2, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 490, 90, 40));
 
         NumCustxt2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NumCustxt2ActionPerformed(evt);
             }
         });
-        getContentPane().add(NumCustxt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 430, 300, 50));
+        getContentPane().add(NumCustxt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 350, 300, 50));
 
         NumCusTxt1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NumCusTxt1ActionPerformed(evt);
             }
         });
-        getContentPane().add(NumCusTxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 290, 300, 50));
+        getContentPane().add(NumCusTxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 240, 300, 50));
 
         jLabel1.setFont(new java.awt.Font("#TS  Malee Normal", 1, 55)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 204));
-        jLabel1.setText("BACKLOG");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 60, 260, 61));
+        jLabel1.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/backlog_header.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1, 800, 190));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/14309876301083205889speech-bubble.png"))); // NOI18N
-        jLabel3.setText("jLabel3");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 550, 80));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 650, 80));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/bg2.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 870, 600));
@@ -94,11 +93,11 @@ public class BackLog extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void DoneButtom1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DoneButtom1ActionPerformed
+    private void DoneButtom2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DoneButtom2ActionPerformed
         dispose();
         Function1 f = new Function1();
         f.setVisible(true);
-    }//GEN-LAST:event_DoneButtom1ActionPerformed
+    }//GEN-LAST:event_DoneButtom2ActionPerformed
 
     private void NumCustxt2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumCustxt2ActionPerformed
         // TODO add your handling code here:
@@ -124,7 +123,7 @@ public class BackLog extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton DoneButtom1;
+    private javax.swing.JButton DoneButtom2;
     private javax.swing.JTextField NumCusTxt1;
     private javax.swing.JTextField NumCustxt2;
     private javax.swing.JLabel jLabel1;
