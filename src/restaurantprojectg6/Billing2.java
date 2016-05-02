@@ -43,14 +43,17 @@ public class Billing2 extends javax.swing.JFrame {
     private void initComponents() {
 
         jLayeredPane1 = new javax.swing.JLayeredPane();
-        jLabel2 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        DoneButtom1 = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         customerName = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        totalprice = new javax.swing.JLabel();
         tableNo = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
         jLayeredPane1.setLayout(jLayeredPane1Layout);
@@ -65,42 +68,75 @@ public class Billing2 extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 153, 0));
+        setMaximumSize(new java.awt.Dimension(800, 600));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel2.setText("Billing");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 30, 150, 50));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/checkbb.png"))); // NOI18N
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 420, 350, 90));
 
-        jLabel3.setFont(new java.awt.Font("Gabriola", 0, 24)); // NOI18N
+        DoneButtom1.setBackground(new java.awt.Color(255, 255, 255));
+        DoneButtom1.setFont(new java.awt.Font("Perpetua", 1, 12)); // NOI18N
+        DoneButtom1.setText("BACK");
+        DoneButtom1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DoneButtom1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(DoneButtom1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 550, 70, 30));
+
+        jLabel8.setFont(new java.awt.Font("#TS  Malee Normal", 0, 55)); // NOI18N
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setText("Billing");
+        jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 50, 210, 60));
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/head1.png"))); // NOI18N
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 30, 580, 90));
+
+        jLabel3.setFont(new java.awt.Font("Perpetua", 0, 36)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 0));
         jLabel3.setText("Customer Name :");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 130, 70));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 170, 280, 70));
 
-        jLabel5.setFont(new java.awt.Font("Gabriola", 0, 24)); // NOI18N
-        jLabel5.setText("Total Price");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 110, 108));
+        jLabel5.setFont(new java.awt.Font("Perpetua", 0, 36)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 0));
+        jLabel5.setText("Total Price :");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 320, 180, 70));
 
-        jLabel4.setFont(new java.awt.Font("Gabriola", 0, 24)); // NOI18N
-        jLabel4.setText("Table No.");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 140, 100));
+        jLabel4.setFont(new java.awt.Font("Perpetua", 0, 36)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 0));
+        jLabel4.setText("Table No. :");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, 180, 80));
 
         customerName.setBackground(new java.awt.Color(204, 255, 204));
-        customerName.setText("cus");
-        getContentPane().add(customerName, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 80, 160, 60));
+        customerName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 0)));
+        getContentPane().add(customerName, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 180, 260, 40));
 
-        jLabel6.setBackground(new java.awt.Color(204, 255, 204));
-        jLabel6.setText("price");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 230, 110, 40));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/bg.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        totalprice.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/bg.png"))); // NOI18N
+        totalprice.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 0)));
+        getContentPane().add(totalprice, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 330, 260, 40));
 
         tableNo.setBackground(new java.awt.Color(204, 255, 204));
-        tableNo.setText("table");
-        getContentPane().add(tableNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 140, 200, 180));
+        tableNo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 0)));
+        getContentPane().add(tableNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 260, 260, 40));
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/bg2.png"))); // NOI18N
+        jLabel7.setText("jLabel7");
+        jLabel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 0)));
+        jLabel7.setMaximumSize(new java.awt.Dimension(800, 600));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void DoneButtom1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DoneButtom1ActionPerformed
+        dispose();
+        Function1 f = new Function1();
+        f.setVisible(true);
+
+        JOptionPane.showMessageDialog(this, "Welcome to Make a Wish system");
+    }//GEN-LAST:event_DoneButtom1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -140,14 +176,17 @@ public class Billing2 extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton DoneButtom1;
     private javax.swing.JLabel customerName;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JLabel tableNo;
+    private javax.swing.JLabel totalprice;
     // End of variables declaration//GEN-END:variables
 }
