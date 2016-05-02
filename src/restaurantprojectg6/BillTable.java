@@ -146,10 +146,15 @@ public class BillTable extends javax.swing.JFrame {
         Table10 = new javax.swing.JToggleButton();
         Table11 = new javax.swing.JToggleButton();
         doneButton = new javax.swing.JButton();
+        DoneButtom1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(800, 600));
+        setMinimumSize(new java.awt.Dimension(800, 600));
         setResizable(false);
+        getContentPane().setLayout(null);
 
         Table3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
         Table3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -157,6 +162,8 @@ public class BillTable extends javax.swing.JFrame {
                 Table3MouseClicked(evt);
             }
         });
+        getContentPane().add(Table3);
+        Table3.setBounds(110, 360, 30, 30);
 
         Table2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
         Table2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -164,6 +171,8 @@ public class BillTable extends javax.swing.JFrame {
                 Table2MouseClicked(evt);
             }
         });
+        getContentPane().add(Table2);
+        Table2.setBounds(110, 300, 30, 30);
 
         Table5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
         Table5.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -171,6 +180,8 @@ public class BillTable extends javax.swing.JFrame {
                 Table5MouseClicked(evt);
             }
         });
+        getContentPane().add(Table5);
+        Table5.setBounds(190, 340, 30, 30);
 
         Table1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Check.png"))); // NOI18N
         Table1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -183,6 +194,8 @@ public class BillTable extends javax.swing.JFrame {
                 Table1ActionPerformed(evt);
             }
         });
+        getContentPane().add(Table1);
+        Table1.setBounds(110, 230, 30, 30);
 
         Table12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
         Table12.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -190,6 +203,8 @@ public class BillTable extends javax.swing.JFrame {
                 Table12MouseClicked(evt);
             }
         });
+        getContentPane().add(Table12);
+        Table12.setBounds(490, 320, 30, 30);
 
         Table4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
         Table4.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -197,6 +212,8 @@ public class BillTable extends javax.swing.JFrame {
                 Table4MouseClicked(evt);
             }
         });
+        getContentPane().add(Table4);
+        Table4.setBounds(190, 270, 30, 30);
 
         Table6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
         Table6.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -204,6 +221,8 @@ public class BillTable extends javax.swing.JFrame {
                 Table6MouseClicked(evt);
             }
         });
+        getContentPane().add(Table6);
+        Table6.setBounds(270, 270, 30, 30);
 
         Table7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
         Table7.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -211,6 +230,8 @@ public class BillTable extends javax.swing.JFrame {
                 Table7MouseClicked(evt);
             }
         });
+        getContentPane().add(Table7);
+        Table7.setBounds(270, 330, 30, 30);
 
         Table8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
         Table8.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -218,6 +239,8 @@ public class BillTable extends javax.swing.JFrame {
                 Table8MouseClicked(evt);
             }
         });
+        getContentPane().add(Table8);
+        Table8.setBounds(270, 420, 30, 30);
 
         Table9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
         Table9.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -225,6 +248,13 @@ public class BillTable extends javax.swing.JFrame {
                 Table9MouseClicked(evt);
             }
         });
+        Table9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Table9ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Table9);
+        Table9.setBounds(380, 270, 30, 30);
 
         Table10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
         Table10.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -232,6 +262,8 @@ public class BillTable extends javax.swing.JFrame {
                 Table10MouseClicked(evt);
             }
         });
+        getContentPane().add(Table10);
+        Table10.setBounds(380, 330, 30, 30);
 
         Table11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
         Table11.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -239,110 +271,42 @@ public class BillTable extends javax.swing.JFrame {
                 Table11MouseClicked(evt);
             }
         });
+        getContentPane().add(Table11);
+        Table11.setBounds(380, 400, 30, 30);
 
         doneButton.setBackground(new java.awt.Color(255, 204, 204));
         doneButton.setForeground(new java.awt.Color(51, 51, 51));
-        doneButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Girl.png"))); // NOI18N
-        doneButton.setText("DONE");
+        doneButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/girl.png"))); // NOI18N
         doneButton.setToolTipText("");
         doneButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 doneButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(doneButton);
+        doneButton.setBounds(580, 480, 169, 75);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/R.jpg"))); // NOI18N
+        DoneButtom1.setBackground(new java.awt.Color(255, 255, 255));
+        DoneButtom1.setFont(new java.awt.Font("Perpetua", 1, 18)); // NOI18N
+        DoneButtom1.setText("BACK");
+        DoneButtom1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DoneButtom1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(DoneButtom1);
+        DoneButtom1.setBounds(20, 550, 90, 29);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 628, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 9, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(100, 100, 100)
-                            .addComponent(Table1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(260, 260, 260)
-                            .addComponent(Table6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(80, 80, 80)
-                            .addComponent(Table9, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(100, 100, 100)
-                            .addComponent(Table3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(50, 50, 50)
-                            .addComponent(Table5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(50, 50, 50)
-                            .addComponent(Table7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(80, 80, 80)
-                            .addComponent(Table10, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(80, 80, 80)
-                            .addComponent(Table12, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(370, 370, 370)
-                            .addComponent(Table11, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(440, 440, 440)
-                            .addComponent(doneButton, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(100, 100, 100)
-                            .addComponent(Table2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(180, 180, 180)
-                            .addComponent(Table4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(260, 260, 260)
-                            .addComponent(Table8, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 610, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(0, 9, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 542, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(190, 190, 190)
-                            .addComponent(Table1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(Table6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(Table9, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(20, 20, 20)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(50, 50, 50)
-                                    .addComponent(Table3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(30, 30, 30)
-                                    .addComponent(Table5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(20, 20, 20)
-                                    .addComponent(Table7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(20, 20, 20)
-                                    .addComponent(Table10, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(Table12, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(10, 10, 10)
-                            .addComponent(Table11, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(50, 50, 50)
-                            .addComponent(doneButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(260, 260, 260)
-                            .addComponent(Table2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(230, 230, 230)
-                            .addComponent(Table4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(380, 380, 380)
-                            .addComponent(Table8, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 520, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/R.png"))); // NOI18N
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(10, 30, 610, 550);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/bg2.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        jLabel1.setMaximumSize(new java.awt.Dimension(800, 600));
+        jLabel1.setMinimumSize(new java.awt.Dimension(800, 600));
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 800, 600);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -358,11 +322,11 @@ public class BillTable extends javax.swing.JFrame {
         if(Table3.isSelected()){
             Table3.setIcon(new ImageIcon(imgoff));
             db.executeQuery(setFalse);
-            JOptionPane.showMessageDialog(null, "Table selected");
+            JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
         }else{
             Table3.setIcon(new ImageIcon(imgon));
             db.executeQuery(setTrue);
-            JOptionPane.showMessageDialog(null, "Table deselected");
+            JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
         }
         System.out.println(db.connect());
     }//GEN-LAST:event_Table3MouseClicked
@@ -379,11 +343,11 @@ public class BillTable extends javax.swing.JFrame {
         if(Table2.isSelected()){
             Table2.setIcon(new ImageIcon(imgoff));
             db.executeQuery(setFalse);
-            JOptionPane.showMessageDialog(null, "Table selected");
+            JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
         }else{
             Table2.setIcon(new ImageIcon(imgon));
             db.executeQuery(setTrue);
-            JOptionPane.showMessageDialog(null, "Table deselected");
+            JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
         }
         System.out.println(db.disconnect());
     }//GEN-LAST:event_Table2MouseClicked
@@ -399,11 +363,11 @@ public class BillTable extends javax.swing.JFrame {
         if(Table5.isSelected()){
             Table5.setIcon(new ImageIcon(imgoff));
             db.executeQuery(setFalse);
-            JOptionPane.showMessageDialog(null, "Table selected");
+           JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
         }else{
             Table5.setIcon(new ImageIcon(imgon));
             db.executeQuery(setTrue);
-            JOptionPane.showMessageDialog(null, "Table deselected");
+            JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
         }
         System.out.println(db.disconnect());
     }//GEN-LAST:event_Table5MouseClicked
@@ -420,11 +384,11 @@ public class BillTable extends javax.swing.JFrame {
         if(Table1.isSelected()){
             Table1.setIcon(new ImageIcon(imgoff));
             db.executeQuery(setFalse);
-            JOptionPane.showMessageDialog(null, "Table selected");
+           JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
         }else{
             Table1.setIcon(new ImageIcon(imgon));
             db.executeQuery(setTrue);
-            JOptionPane.showMessageDialog(null, "Table deselected");
+            JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
         }
         System.out.println(db.disconnect());
     }//GEN-LAST:event_Table1MouseClicked
@@ -441,11 +405,11 @@ public class BillTable extends javax.swing.JFrame {
         if(Table12.isSelected()){
             Table12.setIcon(new ImageIcon(imgoff));
             db.executeQuery(setFalse);
-            JOptionPane.showMessageDialog(null, "Table selected");
+             JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
         }else{
             Table12.setIcon(new ImageIcon(imgon));
             db.executeQuery(setTrue);
-            JOptionPane.showMessageDialog(null, "Table deselected");
+            JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
         }
         System.out.println(db.disconnect());
     }//GEN-LAST:event_Table12MouseClicked
@@ -462,11 +426,11 @@ public class BillTable extends javax.swing.JFrame {
         if(Table4.isSelected()){
             Table4.setIcon(new ImageIcon(imgoff));
             db.executeQuery(setFalse);
-            JOptionPane.showMessageDialog(null, "Table selected");
+           JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
         }else{
             Table4.setIcon(new ImageIcon(imgon));
             db.executeQuery(setTrue);
-            JOptionPane.showMessageDialog(null, "Table deselected");
+           JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
         }
         System.out.println(db.disconnect());
     }//GEN-LAST:event_Table4MouseClicked
@@ -483,11 +447,11 @@ public class BillTable extends javax.swing.JFrame {
         if(Table6.isSelected()){
             Table6.setIcon(new ImageIcon(imgoff));
             db.executeQuery(setFalse);
-            JOptionPane.showMessageDialog(null, "Table selected");
+            JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
         }else{
             Table6.setIcon(new ImageIcon(imgon));
             db.executeQuery(setTrue);
-            JOptionPane.showMessageDialog(null, "Table deselected");
+            JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
         }
         System.out.println(db.disconnect());
     }//GEN-LAST:event_Table6MouseClicked
@@ -504,11 +468,11 @@ public class BillTable extends javax.swing.JFrame {
         if(Table7.isSelected()){
             Table7.setIcon(new ImageIcon(imgoff));
             db.executeQuery(setFalse);
-            JOptionPane.showMessageDialog(null, "Table selected");
+            JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
         }else{
             Table7.setIcon(new ImageIcon(imgon));
             db.executeQuery(setTrue);
-            JOptionPane.showMessageDialog(null, "Table deselected");
+           JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
         }
         System.out.println(db.disconnect());
     }//GEN-LAST:event_Table7MouseClicked
@@ -525,11 +489,11 @@ public class BillTable extends javax.swing.JFrame {
         if(Table8.isSelected()){
             Table8.setIcon(new ImageIcon(imgoff));
             db.executeQuery(setFalse);
-            JOptionPane.showMessageDialog(null, "Table selected");
+           JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
         }else{
             Table8.setIcon(new ImageIcon(imgon));
             db.executeQuery(setTrue);
-            JOptionPane.showMessageDialog(null, "Table deselected");
+            JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
         }
         System.out.println(db.disconnect());
     }//GEN-LAST:event_Table8MouseClicked
@@ -546,11 +510,11 @@ public class BillTable extends javax.swing.JFrame {
         if(Table9.isSelected()){
             Table9.setIcon(new ImageIcon(imgoff));
             db.executeQuery(setFalse);
-            JOptionPane.showMessageDialog(null, "Table selected");
+           JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
         }else{
             Table9.setIcon(new ImageIcon(imgon));
             db.executeQuery(setTrue);
-            JOptionPane.showMessageDialog(null, "Table deselected");
+            JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
         }
         System.out.println(db.disconnect());
     }//GEN-LAST:event_Table9MouseClicked
@@ -567,11 +531,11 @@ public class BillTable extends javax.swing.JFrame {
         if(Table10.isSelected()){
             Table10.setIcon(new ImageIcon(imgoff));
             db.executeQuery(setFalse);
-            JOptionPane.showMessageDialog(null, "Table selected");
+           JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
         }else{
             Table10.setIcon(new ImageIcon(imgon));
             db.executeQuery(setTrue);
-            JOptionPane.showMessageDialog(null, "Table deselected");
+           JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
         }
         System.out.println(db.disconnect());
     }//GEN-LAST:event_Table10MouseClicked
@@ -588,11 +552,11 @@ public class BillTable extends javax.swing.JFrame {
         if(Table11.isSelected()){
             Table11.setIcon(new ImageIcon(imgoff));
             db.executeQuery(setFalse);
-            JOptionPane.showMessageDialog(null, "Table selected");
+            JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
         }else{
             Table11.setIcon(new ImageIcon(imgon));
             db.executeQuery(setTrue);
-            JOptionPane.showMessageDialog(null, "Table deselected");
+            JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
         }
         System.out.println(db.disconnect());
     }//GEN-LAST:event_Table11MouseClicked
@@ -604,6 +568,18 @@ public class BillTable extends javax.swing.JFrame {
     private void Table1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Table1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Table1ActionPerformed
+
+    private void Table9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Table9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Table9ActionPerformed
+
+    private void DoneButtom1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DoneButtom1ActionPerformed
+        dispose();
+        Billing1 bill = new Billing1();
+        bill.setVisible(true);
+
+        JOptionPane.showMessageDialog(this, "select table" ,"Make a wish",JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_DoneButtom1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -641,6 +617,7 @@ public class BillTable extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton DoneButtom1;
     private javax.swing.JToggleButton Table1;
     private javax.swing.JToggleButton Table10;
     private javax.swing.JToggleButton Table11;
@@ -654,6 +631,7 @@ public class BillTable extends javax.swing.JFrame {
     private javax.swing.JToggleButton Table8;
     private javax.swing.JToggleButton Table9;
     private javax.swing.JButton doneButton;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }
