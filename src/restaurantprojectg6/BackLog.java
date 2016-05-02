@@ -28,12 +28,13 @@ public class BackLog extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        noCustomer = new javax.swing.JLabel();
         popFood = new javax.swing.JLabel();
-        DoneButtom2 = new javax.swing.JButton();
+        noCustomer = new javax.swing.JLabel();
         NumCustxt2 = new javax.swing.JTextField();
-        NumCusTxt1 = new javax.swing.JTextField();
+        DoneButtom2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        NumCusTxt1 = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
@@ -42,18 +43,24 @@ public class BackLog extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        noCustomer.setFont(new java.awt.Font("#TS  Malee Normal", 0, 36)); // NOI18N
-        noCustomer.setForeground(new java.awt.Color(224, 224, 55));
-        noCustomer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/golden_star.png"))); // NOI18N
-        noCustomer.setText("Number of Customer");
-        getContentPane().add(noCustomer, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, 380, 70));
-
-        popFood.setFont(new java.awt.Font("#TS  Malee Normal", 0, 36)); // NOI18N
+        popFood.setFont(new java.awt.Font("Perpetua", 0, 36)); // NOI18N
         popFood.setForeground(new java.awt.Color(224, 224, 55));
-        popFood.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/golden_star.png"))); // NOI18N
+        popFood.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/golden_star.png"))); // NOI18N
         popFood.setText("Popular Food");
         popFood.setToolTipText("");
-        getContentPane().add(popFood, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, -1, -1));
+        getContentPane().add(popFood, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 200, 290, 70));
+
+        noCustomer.setFont(new java.awt.Font("Perpetua", 0, 36)); // NOI18N
+        noCustomer.setForeground(new java.awt.Color(224, 224, 55));
+        noCustomer.setText("Number of Customer");
+        getContentPane().add(noCustomer, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 310, 290, 80));
+
+        NumCustxt2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NumCustxt2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(NumCustxt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 220, 300, 40));
 
         DoneButtom2.setBackground(new java.awt.Color(255, 255, 255));
         DoneButtom2.setFont(new java.awt.Font("Adobe Caslon Pro", 1, 18)); // NOI18N
@@ -63,32 +70,29 @@ public class BackLog extends javax.swing.JFrame {
                 DoneButtom2ActionPerformed(evt);
             }
         });
-        getContentPane().add(DoneButtom2, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 490, 90, 40));
+        getContentPane().add(DoneButtom2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 480, 90, 40));
 
-        NumCustxt2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NumCustxt2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(NumCustxt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 350, 300, 50));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/cakey.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 170, 390));
 
         NumCusTxt1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NumCusTxt1ActionPerformed(evt);
             }
         });
-        getContentPane().add(NumCusTxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 240, 300, 50));
+        getContentPane().add(NumCusTxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 330, 200, 40));
 
-        jLabel1.setFont(new java.awt.Font("#TS  Malee Normal", 1, 55)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/backlog_header.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1, 800, 190));
+        jLabel4.setFont(new java.awt.Font("#TS  Malee Normal", 0, 55)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("Backlog");
+        jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 50, 200, 80));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/14309876301083205889speech-bubble.png"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 650, 80));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/head1.png"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, 650, 80));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/bg2.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 870, 600));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/bg2.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -129,6 +133,7 @@ public class BackLog extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel noCustomer;
     private javax.swing.JLabel popFood;
     // End of variables declaration//GEN-END:variables
