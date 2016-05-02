@@ -134,8 +134,6 @@ public class Table extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jToggleButton1 = new javax.swing.JToggleButton();
-        jMenuItem1 = new javax.swing.JMenuItem();
         jPanel1 = new javax.swing.JPanel();
         Table3 = new javax.swing.JToggleButton();
         Table2 = new javax.swing.JToggleButton();
@@ -150,15 +148,14 @@ public class Table extends javax.swing.JFrame {
         Table10 = new javax.swing.JToggleButton();
         Table11 = new javax.swing.JToggleButton();
         jButton1 = new javax.swing.JButton();
+        DoneButtom1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-
-        jToggleButton1.setText("jToggleButton1");
-
-        jMenuItem1.setText("jMenuItem1");
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
+        jPanel1.setPreferredSize(new java.awt.Dimension(800, 600));
         jPanel1.setLayout(null);
 
         Table3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
@@ -168,7 +165,7 @@ public class Table extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Table3);
-        Table3.setBounds(100, 320, 30, 30);
+        Table3.setBounds(100, 360, 30, 30);
 
         Table2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
         Table2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -177,7 +174,7 @@ public class Table extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Table2);
-        Table2.setBounds(100, 260, 30, 30);
+        Table2.setBounds(100, 300, 30, 30);
 
         Table5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
         Table5.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -186,7 +183,7 @@ public class Table extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Table5);
-        Table5.setBounds(180, 300, 30, 30);
+        Table5.setBounds(180, 340, 30, 30);
 
         Table1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Check.png"))); // NOI18N
         Table1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -195,7 +192,7 @@ public class Table extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Table1);
-        Table1.setBounds(100, 190, 30, 30);
+        Table1.setBounds(100, 230, 30, 30);
 
         Table12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
         Table12.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -204,7 +201,7 @@ public class Table extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Table12);
-        Table12.setBounds(480, 270, 30, 30);
+        Table12.setBounds(480, 320, 30, 30);
 
         Table4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
         Table4.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -213,7 +210,7 @@ public class Table extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Table4);
-        Table4.setBounds(180, 230, 30, 30);
+        Table4.setBounds(180, 270, 30, 30);
 
         Table6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
         Table6.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -222,7 +219,7 @@ public class Table extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Table6);
-        Table6.setBounds(260, 220, 30, 30);
+        Table6.setBounds(260, 270, 30, 30);
 
         Table7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
         Table7.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -230,8 +227,13 @@ public class Table extends javax.swing.JFrame {
                 Table7MouseClicked(evt);
             }
         });
+        Table7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Table7ActionPerformed(evt);
+            }
+        });
         jPanel1.add(Table7);
-        Table7.setBounds(260, 290, 30, 30);
+        Table7.setBounds(260, 330, 30, 30);
 
         Table8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
         Table8.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -240,7 +242,7 @@ public class Table extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Table8);
-        Table8.setBounds(260, 380, 30, 30);
+        Table8.setBounds(260, 430, 30, 30);
 
         Table9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
         Table9.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -249,7 +251,7 @@ public class Table extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Table9);
-        Table9.setBounds(370, 220, 30, 30);
+        Table9.setBounds(370, 270, 30, 30);
 
         Table10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
         Table10.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -258,7 +260,7 @@ public class Table extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Table10);
-        Table10.setBounds(370, 290, 30, 30);
+        Table10.setBounds(370, 330, 30, 30);
 
         Table11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
         Table11.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -267,7 +269,7 @@ public class Table extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Table11);
-        Table11.setBounds(370, 360, 30, 30);
+        Table11.setBounds(370, 400, 30, 30);
 
         jButton1.setBackground(new java.awt.Color(255, 204, 204));
         jButton1.setForeground(new java.awt.Color(51, 51, 51));
@@ -280,21 +282,40 @@ public class Table extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(440, 440, 150, 60);
+        jButton1.setBounds(610, 490, 150, 70);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/R.jpg"))); // NOI18N
+        DoneButtom1.setBackground(new java.awt.Color(255, 255, 255));
+        DoneButtom1.setFont(new java.awt.Font("Perpetua", 1, 18)); // NOI18N
+        DoneButtom1.setText("BACK");
+        DoneButtom1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DoneButtom1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(DoneButtom1);
+        DoneButtom1.setBounds(20, 550, 90, 29);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/R.png"))); // NOI18N
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(0, 0, 610, 520);
+        jLabel2.setBounds(0, 20, 630, 570);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/bg2.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        jLabel1.setMaximumSize(new java.awt.Dimension(800, 600));
+        jLabel1.setMinimumSize(new java.awt.Dimension(800, 600));
+        jLabel1.setPreferredSize(new java.awt.Dimension(800, 600));
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(0, 0, 800, 600);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 612, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 521, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -580,6 +601,18 @@ public class Table extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void Table7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Table7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Table7ActionPerformed
+
+    private void DoneButtom1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DoneButtom1ActionPerformed
+        dispose();
+        Function1 f = new Function1();
+        f.setVisible(true);
+        
+        JOptionPane.showMessageDialog(this, "Welcome to Make a Wish system");
+    }//GEN-LAST:event_DoneButtom1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -615,6 +648,7 @@ public class Table extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton DoneButtom1;
     private javax.swing.JToggleButton Table1;
     private javax.swing.JToggleButton Table10;
     private javax.swing.JToggleButton Table11;
@@ -628,9 +662,8 @@ public class Table extends javax.swing.JFrame {
     private javax.swing.JToggleButton Table8;
     private javax.swing.JToggleButton Table9;
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JToggleButton jToggleButton1;
     // End of variables declaration//GEN-END:variables
 }
