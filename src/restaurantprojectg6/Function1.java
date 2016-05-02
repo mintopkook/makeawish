@@ -5,6 +5,10 @@
  */
 package restaurantprojectg6;
 
+
+
+
+
 /**
  *
  * @author JamesP
@@ -30,9 +34,9 @@ public class Function1 extends javax.swing.JFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
         billing = new javax.swing.JButton();
@@ -57,22 +61,22 @@ public class Function1 extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/waitress.png"))); // NOI18N
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 330, -1));
+
         jLabel1.setFont(new java.awt.Font("MV Boli", 0, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/makeawish_logo.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 340, 80));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/makeawish_logo.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 360, 120));
 
         jLabel2.setFont(new java.awt.Font("Gabriola", 0, 36)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 51, 51));
-        jLabel2.setText("Restaurant system management");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 80, 360, 80));
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/waitress.png"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 210, 210, 300));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/RESNAME.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 40, 460, 120));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 204));
         jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.setForeground(new java.awt.Color(255, 255, 102));
+        jPanel1.setForeground(new java.awt.Color(204, 255, 204));
         jPanel1.setLayout(new java.awt.GridLayout(3, 0));
 
         jButton2.setBackground(new java.awt.Color(255, 204, 153));
@@ -86,7 +90,7 @@ public class Function1 extends javax.swing.JFrame {
         });
         jPanel1.add(jButton2);
 
-        billing.setBackground(new java.awt.Color(255, 255, 153));
+        billing.setBackground(new java.awt.Color(255, 255, 204));
         billing.setFont(new java.awt.Font("Gabriola", 1, 36)); // NOI18N
         billing.setForeground(new java.awt.Color(51, 51, 51));
         billing.setText("Billing");
@@ -113,15 +117,16 @@ public class Function1 extends javax.swing.JFrame {
         jLabel5.setBackground(new java.awt.Color(255, 204, 153));
         jLabel5.setFont(new java.awt.Font("Gabriola", 1, 36)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(204, 204, 0));
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/bg.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/bg2.png"))); // NOI18N
         jLabel5.setText("jLabel5");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
 
-        setBounds(0, 0, 816, 639);
+        setBounds(0, 0, 816, 638);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         dispose();
+       
         Queue1 q = new Queue1();
         q.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -179,7 +184,7 @@ public class Function1 extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
