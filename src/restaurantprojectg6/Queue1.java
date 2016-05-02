@@ -35,7 +35,9 @@ public class Queue1 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         customerName = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         ContinueButton = new javax.swing.JButton();
@@ -46,14 +48,24 @@ public class Queue1 extends javax.swing.JFrame {
         queueTime = new javax.swing.JTextField();
         ContinueButton1 = new javax.swing.JButton();
         chooseTable = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(800, 600));
+        setMinimumSize(new java.awt.Dimension(800, 600));
+        setPreferredSize(new java.awt.Dimension(800, 600));
         setResizable(false);
 
-        jLabel1.setFont(new java.awt.Font("TH Charm of AU", 0, 36)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Restaurant Management System");
-        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel5.setFont(new java.awt.Font("#TS  Malee Normal", 0, 36)); // NOI18N
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("Restaurant Management System");
+        jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 40, 440, 80));
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/head1.png"))); // NOI18N
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 30, 560, 90));
 
         customerName.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         customerName.addActionListener(new java.awt.event.ActionListener() {
@@ -61,9 +73,12 @@ public class Queue1 extends javax.swing.JFrame {
                 customerNameActionPerformed(evt);
             }
         });
+        jPanel1.add(customerName, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 190, 230, 30));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Perpetua", 0, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 0));
         jLabel2.setText("Customer's name");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 190, -1, -1));
 
         ContinueButton.setText("Continue");
         ContinueButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -76,16 +91,24 @@ public class Queue1 extends javax.swing.JFrame {
                 ContinueButtonActionPerformed(evt);
             }
         });
+        jPanel1.add(ContinueButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 530, -1, -1));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Perpetua", 0, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 0));
         jLabel3.setText("Phone Number");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 250, -1, -1));
 
         phoneNumber.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel1.add(phoneNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 250, 230, 30));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(297, 331, -1, -1));
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Perpetua", 0, 24)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 0));
         jLabel8.setText("Queuing Time");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 310, -1, -1));
 
         queueTime.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel1.add(queueTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 310, 230, 30));
 
         ContinueButton1.setText("Back");
         ContinueButton1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -98,91 +121,47 @@ public class Queue1 extends javax.swing.JFrame {
                 ContinueButton1ActionPerformed(evt);
             }
         });
+        jPanel1.add(ContinueButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 530, -1, -1));
 
-        chooseTable.setText("Choose Table");
+        chooseTable.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/chtable.png"))); // NOI18N
         chooseTable.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 chooseTableActionPerformed(evt);
             }
         });
+        jPanel1.add(chooseTable, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 400, 310, 80));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/bg2.png"))); // NOI18N
+        jLabel4.setText("jLabel4");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 810, 600));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(ContinueButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(ContinueButton)
-                .addGap(20, 20, 20))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(55, 55, 55)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(90, 90, 90)
-                                .addComponent(jLabel7))
-                            .addComponent(jLabel3)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(31, 31, 31)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel8))
-                                .addGap(51, 51, 51)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(queueTime, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(phoneNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(customerName, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(181, 181, 181)
-                        .addComponent(chooseTable, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(81, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(jLabel1)
-                .addGap(36, 36, 36)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(customerName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(phoneNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(queueTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(44, 44, 44)
-                .addComponent(chooseTable)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
-                .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ContinueButton)
-                    .addComponent(ContinueButton1))
-                .addGap(58, 58, 58))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    public Table getTable(){
-        return t;
-    }
-    
-    private void ContinueButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ContinueButtonMouseClicked
-        
-        //Now how do we put it in Database by pressing this button =.=
+    private void chooseTableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseTableActionPerformed
+        t.setVisible(true);
+    }//GEN-LAST:event_chooseTableActionPerformed
 
+    private void ContinueButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContinueButton1ActionPerformed
+        this.setVisible(false);
+        Function1 f = new Function1();
+        f.setVisible(true);
+    }//GEN-LAST:event_ContinueButton1ActionPerformed
 
-    }//GEN-LAST:event_ContinueButtonMouseClicked
+    private void ContinueButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ContinueButton1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ContinueButton1MouseClicked
 
     private void ContinueButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContinueButtonActionPerformed
         CSDbDelegate db = new CSDbDelegate("csprog-in.sit.kmutt.ac.th", "3306", "CSC105_G6", "csc105_2014", "csc105");
@@ -193,15 +172,15 @@ public class Queue1 extends javax.swing.JFrame {
         String date = queueTime.getText();
         int table = t.getCurrentTable();
         String getQueue = "SELECT No FROM RESTAURANT_CustomerInfo ORDER BY No DESC Limit 1";
-        HashMap no = db.queryRow(getQueue); 
+        HashMap no = db.queryRow(getQueue);
         int queue = Integer.parseInt((String)(no.get("No"))) + 1;
         // SQL Insert
         String sql = "INSERT INTO RESTAURANT_CustomerInfo "
-                + "VALUES ('" + queue + "','"
-                + name + "','"
-                + phone + "','"
-                + table + "','"         //Get the data from class table
-                + date + "') ";         //YYYY-MM-DD HH:MI:SS
+        + "VALUES ('" + queue + "','"
+        + name + "','"
+        + phone + "','"
+        + table + "','"         //Get the data from class table
+        + date + "') ";         //YYYY-MM-DD HH:MI:SS
         db.executeQuery(sql);
         customerName.setText("");
         phoneNumber.setText("");
@@ -212,24 +191,19 @@ public class Queue1 extends javax.swing.JFrame {
         System.out.println(db.disconnect());
     }//GEN-LAST:event_ContinueButtonActionPerformed
 
-    private void ContinueButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ContinueButton1MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ContinueButton1MouseClicked
+    private void ContinueButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ContinueButtonMouseClicked
 
-    private void ContinueButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContinueButton1ActionPerformed
-        this.setVisible(false);
-        Function1 f = new Function1();
-        f.setVisible(true);
-    }//GEN-LAST:event_ContinueButton1ActionPerformed
-
-    private void chooseTableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseTableActionPerformed
-        t.setVisible(true);
-    }//GEN-LAST:event_chooseTableActionPerformed
+        //Now how do we put it in Database by pressing this button =.=
+    }//GEN-LAST:event_ContinueButtonMouseClicked
 
     private void customerNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerNameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_customerNameActionPerformed
 
+    public Table getTable(){
+        return t;
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -271,11 +245,14 @@ public class Queue1 extends javax.swing.JFrame {
     private javax.swing.JButton ContinueButton1;
     private javax.swing.JButton chooseTable;
     private javax.swing.JTextField customerName;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField phoneNumber;
     private javax.swing.JTextField queueTime;
     // End of variables declaration//GEN-END:variables
