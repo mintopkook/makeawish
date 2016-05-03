@@ -23,7 +23,7 @@ public class Order2 extends javax.swing.JFrame {
     String foodName;
     int foodPrice;
     int countCoke = 0, countCake = 0, countPepsi = 0, countSpa = 0, countRamen = 0, countCupcake = 0;
-    CSDbDelegate db = new CSDbDelegate("cs14sitkmutt.me", "3306", "CSC105_G6", "CSC105_G6", "CSC105_G6");
+    static CSDbDelegate db = new CSDbDelegate("csprog-in.sit.kmutt.ac.th", "3306", "CSC105_G6", "csc105_2014", "csc105");
     
     public Order2() {
         initComponents();
@@ -135,7 +135,7 @@ public class Order2 extends javax.swing.JFrame {
 
         jPanel2.setLayout(new java.awt.GridLayout(1, 0));
 
-        cake.setBackground(new java.awt.Color(102, 102, 0));
+        cake.setBackground(new java.awt.Color(255, 255, 255));
         cake.setFont(new java.awt.Font("Lucida Grande", 0, 16)); // NOI18N
         cake.setForeground(new java.awt.Color(102, 102, 0));
         cake.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/cake_A-512.png"))); // NOI18N
@@ -147,7 +147,7 @@ public class Order2 extends javax.swing.JFrame {
         });
         jPanel2.add(cake);
 
-        ramen.setBackground(new java.awt.Color(102, 102, 0));
+        ramen.setBackground(new java.awt.Color(255, 255, 255));
         ramen.setFont(new java.awt.Font("Lucida Grande", 0, 16)); // NOI18N
         ramen.setForeground(new java.awt.Color(102, 102, 0));
         ramen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/noodle.png"))); // NOI18N
@@ -159,7 +159,7 @@ public class Order2 extends javax.swing.JFrame {
         });
         jPanel2.add(ramen);
 
-        spaghetti.setBackground(new java.awt.Color(102, 102, 0));
+        spaghetti.setBackground(new java.awt.Color(255, 255, 255));
         spaghetti.setForeground(new java.awt.Color(102, 102, 0));
         spaghetti.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/spa.png"))); // NOI18N
         spaghetti.setText(" Spaghetti");
@@ -174,7 +174,7 @@ public class Order2 extends javax.swing.JFrame {
 
         jPanel1.setLayout(new java.awt.GridLayout(1, 0));
 
-        pepsi.setBackground(new java.awt.Color(102, 102, 0));
+        pepsi.setBackground(new java.awt.Color(255, 255, 255));
         pepsi.setFont(new java.awt.Font("Lucida Grande", 0, 16)); // NOI18N
         pepsi.setForeground(new java.awt.Color(102, 102, 0));
         pepsi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/water.png"))); // NOI18N
@@ -186,7 +186,7 @@ public class Order2 extends javax.swing.JFrame {
         });
         jPanel1.add(pepsi);
 
-        coke.setBackground(new java.awt.Color(102, 102, 0));
+        coke.setBackground(new java.awt.Color(255, 255, 255));
         coke.setFont(new java.awt.Font("Lucida Grande", 0, 16)); // NOI18N
         coke.setForeground(new java.awt.Color(102, 102, 0));
         coke.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/water.png"))); // NOI18N
@@ -198,7 +198,7 @@ public class Order2 extends javax.swing.JFrame {
         });
         jPanel1.add(coke);
 
-        cupcake.setBackground(new java.awt.Color(102, 102, 0));
+        cupcake.setBackground(new java.awt.Color(255, 255, 255));
         cupcake.setFont(new java.awt.Font("Lucida Grande", 0, 16)); // NOI18N
         cupcake.setForeground(new java.awt.Color(102, 102, 0));
         cupcake.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/cupp.png"))); // NOI18N
@@ -363,7 +363,8 @@ public class Order2 extends javax.swing.JFrame {
     }//GEN-LAST:event_doneButtonActionPerformed
 
     private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
-        // TODO add your handling code here:
+        Queue1 que = new Queue1();
+        que.setVisible(true);
     }//GEN-LAST:event_backActionPerformed
 
     /**

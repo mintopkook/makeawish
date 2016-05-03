@@ -108,6 +108,11 @@ public class Queue1 extends javax.swing.JFrame {
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 310, -1, -1));
 
         queueTime.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        queueTime.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                queueTimeActionPerformed(evt);
+            }
+        });
         jPanel1.add(queueTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 310, 230, 30));
 
         ContinueButton1.setText("Back");
@@ -199,6 +204,10 @@ public class Queue1 extends javax.swing.JFrame {
     private void customerNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerNameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_customerNameActionPerformed
+
+    private void queueTimeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_queueTimeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_queueTimeActionPerformed
 
     public Table getTable(){
         return t;
