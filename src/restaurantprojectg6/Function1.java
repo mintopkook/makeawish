@@ -132,6 +132,7 @@ public class Function1 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void billingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_billingActionPerformed
+       //test
         dispose();
         Billing1 b = new Billing1();
         b.setVisible(true);
