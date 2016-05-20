@@ -295,7 +295,7 @@ public class BillTable extends javax.swing.JFrame {
             }
         });
         getContentPane().add(DoneButtom1);
-        DoneButtom1.setBounds(20, 550, 90, 33);
+        DoneButtom1.setBounds(20, 550, 90, 29);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/R.png"))); // NOI18N
         getContentPane().add(jLabel2);
