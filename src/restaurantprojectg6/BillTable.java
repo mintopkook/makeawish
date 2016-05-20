@@ -10,6 +10,7 @@ package restaurantprojectg6;
  * @author JamesP
  */
 import java.awt.Image;
+import java.awt.*;
 import javax.swing.ImageIcon;
 import edu.sit.cs.db.CSDbDelegate;
 import java.sql.ResultSet;
