@@ -230,7 +230,8 @@ public class Order2 extends javax.swing.JFrame {
         model.addRow(row);
         price += foodPrice;
         countCoke++;
-        priceLabel.setText("Total price: " + price);
+        priceLabel.setText("Total price: ");
+        total.setText(price+"");
     }//GEN-LAST:event_cokeActionPerformed
 
     private void pepsiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pepsiActionPerformed
@@ -244,7 +245,8 @@ public class Order2 extends javax.swing.JFrame {
         model.addRow(row);
         price += foodPrice;
         countPepsi++;
-        priceLabel.setText("Total price: " + price);
+        priceLabel.setText("Total price: ");
+        total.setText(price+"");
     }//GEN-LAST:event_pepsiActionPerformed
 
     private void cupcakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cupcakeActionPerformed
@@ -258,7 +260,8 @@ public class Order2 extends javax.swing.JFrame {
         model.addRow(row);
         price += foodPrice;
         countCupcake++;
-        priceLabel.setText("Total price: " + price);
+        priceLabel.setText("Total price: ");
+        total.setText(price+"");
     }//GEN-LAST:event_cupcakeActionPerformed
 
     private void cakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cakeActionPerformed
@@ -272,7 +275,8 @@ public class Order2 extends javax.swing.JFrame {
         model.addRow(row);
         price += foodPrice;
         countCake++;
-        priceLabel.setText("Total price: " + price);
+        priceLabel.setText("Total price: ");
+        total.setText(price+"");
     }//GEN-LAST:event_cakeActionPerformed
 
     private void spaghettiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_spaghettiActionPerformed
@@ -286,7 +290,8 @@ public class Order2 extends javax.swing.JFrame {
         model.addRow(row);
         price += foodPrice;
         countSpa++;
-        priceLabel.setText("Total price: " + price);
+        priceLabel.setText("Total price: ");
+        total.setText(price+"");
     }//GEN-LAST:event_spaghettiActionPerformed
 
     private void ramenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ramenActionPerformed
@@ -300,7 +305,8 @@ public class Order2 extends javax.swing.JFrame {
         model.addRow(row);
         price += foodPrice;
         countRamen++;
-        priceLabel.setText("Total price: " + price);
+        priceLabel.setText("Total price: ");
+        total.setText(price+"");
     }//GEN-LAST:event_ramenActionPerformed
 
     private void clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearActionPerformed
@@ -308,7 +314,8 @@ public class Order2 extends javax.swing.JFrame {
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
         model.setRowCount(0);
         countCoke = 0; countCake = 0; countPepsi = 0; countSpa = 0; countRamen = 0; countCupcake = 0; price = 0;
-        priceLabel.setText("Total price: " + price);
+        priceLabel.setText("Total price: ");
+        total.setText("");
     }//GEN-LAST:event_clearActionPerformed
 
     private void doneButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_doneButtonActionPerformed
