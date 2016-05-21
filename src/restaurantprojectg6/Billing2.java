@@ -9,6 +9,7 @@ import edu.sit.cs.db.CSDbDelegate;
 import java.util.ArrayList;
 import java.util.HashMap;
 import javax.swing.JOptionPane;
+import static restaurantprojectg6.BillTable.db;
 /**
  *
  * @author JamesP
@@ -22,7 +23,9 @@ public class Billing2 extends javax.swing.JFrame {
     CSDbDelegate db = new CSDbDelegate("csprog-in.sit.kmutt.ac.th", "3306", "CSC105_G6", "csc105_2014", "csc105");
     int tableNum = bt.getCurrentTable();
     public Billing2() {
+        
         initComponents();
+        checkBill();
         setSize(800,600);
     }
 
@@ -33,9 +36,11 @@ public class Billing2 extends javax.swing.JFrame {
         String cusName = (String)(cn.get("CustomerName"));
         customerName.setText(cusName);
         tableNo.setText(tableNum+"");
+        
         String sqlCost = "SELECT cost FROM RESTAURANT_Table WHERE RESTAURANT_Table.No = " + tableNum;
         HashMap sc = db.queryRow(sqlCost);
         int cost = Integer.parseInt((String)(sc.get("cost")));
+        totalprice.setText(cost+"");
         db.disconnect();
     }
     @SuppressWarnings("unchecked")
@@ -44,7 +49,7 @@ public class Billing2 extends javax.swing.JFrame {
 
         jLayeredPane1 = new javax.swing.JLayeredPane();
         jButton1 = new javax.swing.JButton();
-        DoneButtom1 = new javax.swing.JButton();
+        BackButtom1 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -68,22 +73,26 @@ public class Billing2 extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 153, 0));
-        setMaximumSize(new java.awt.Dimension(800, 600));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/checkbb.png"))); // NOI18N
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 420, 350, 90));
-
-        DoneButtom1.setBackground(new java.awt.Color(255, 255, 255));
-        DoneButtom1.setFont(new java.awt.Font("Perpetua", 1, 12)); // NOI18N
-        DoneButtom1.setText("BACK");
-        DoneButtom1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DoneButtom1ActionPerformed(evt);
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
             }
         });
-        getContentPane().add(DoneButtom1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 550, 70, 30));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 420, 350, 90));
+
+        BackButtom1.setBackground(new java.awt.Color(255, 255, 255));
+        BackButtom1.setFont(new java.awt.Font("Perpetua", 1, 12)); // NOI18N
+        BackButtom1.setText("BACK");
+        BackButtom1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BackButtom1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BackButtom1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 550, 70, 30));
 
         jLabel8.setFont(new java.awt.Font("#TS  Malee Normal", 0, 55)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -113,7 +122,6 @@ public class Billing2 extends javax.swing.JFrame {
         customerName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 0)));
         getContentPane().add(customerName, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 180, 260, 40));
 
-        totalprice.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/bg.png"))); // NOI18N
         totalprice.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 0)));
         getContentPane().add(totalprice, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 330, 260, 40));
 
@@ -130,13 +138,28 @@ public class Billing2 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void DoneButtom1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DoneButtom1ActionPerformed
+    private void BackButtom1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtom1ActionPerformed
         dispose();
         Function1 f = new Function1();
         f.setVisible(true);
 
         JOptionPane.showMessageDialog(this, "Welcome to Make a Wish system");
-    }//GEN-LAST:event_DoneButtom1ActionPerformed
+    }//GEN-LAST:event_BackButtom1ActionPerformed
+    BillTable bil = new BillTable();
+    
+    
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+        System.out.println(db.connect());
+        String sql = "UPDATE RESTAURANT_Table SET isEmpty=" + 1 + ",cost=" + 0 + " WHERE No= " + bil.currentTable;
+        db.executeQuery(sql);
+        dispose();
+        Function1  qq = new Function1();
+        qq.setVisible(true);
+        JOptionPane.showMessageDialog(this, "Thank You" ,"Make a wish",JOptionPane.INFORMATION_MESSAGE);
+           
+       System.out.println(db.disconnect());
+    }//GEN-LAST:event_jButton1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -176,7 +199,7 @@ public class Billing2 extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton DoneButtom1;
+    private javax.swing.JButton BackButtom1;
     private javax.swing.JLabel customerName;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel3;

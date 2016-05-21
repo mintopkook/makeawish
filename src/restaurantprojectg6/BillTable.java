@@ -16,6 +16,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.HashMap;
 import javax.swing.JOptionPane;
+import javax.swing.JToggleButton;
 
 public class BillTable extends javax.swing.JFrame {
 
@@ -33,90 +34,10 @@ public class BillTable extends javax.swing.JFrame {
         setSize(800,600);
     }
     
+    DBTable dt = new DBTable();
+    
     public void updateTable(){
-        db.connect();
-        String checkT = "SELECT isEmpty FROM RESTAURANT_Table";
-        ArrayList<HashMap> table = db.queryRows(checkT);
-        int i = 0;
-        for(HashMap x: table){
-            tableE[i] = (String)(x.get("isEmpty"));
-            i++;
-        }
-        if(tableE[0].equals("true")){
-            Table1.setIcon(new ImageIcon(this.getClass().getResource("Check.png")));
-        }else{
-            Table1.setIcon(new ImageIcon(this.getClass().getResource("Error.png")));
-        }
-        
-        if(tableE[1].equals("true")){
-            Table2.setIcon(new ImageIcon(this.getClass().getResource("Check.png")));
-        }else{
-            Table2.setIcon(new ImageIcon(this.getClass().getResource("Error.png")));
-        }
-        
-        if(tableE[2].equals("true")){
-            Table3.setIcon(new ImageIcon(this.getClass().getResource("Check.png")));
-        }else{
-            Table3.setIcon(new ImageIcon(this.getClass().getResource("Error.png")));
-        }
-        
-        
-        if(tableE[3].equals("true")){
-            Table4.setIcon(new ImageIcon(this.getClass().getResource("Check.png")));
-        }else{
-            Table4.setIcon(new ImageIcon(this.getClass().getResource("Error.png")));
-        }
-        
-        
-        if(tableE[4].equals("true")){
-            Table5.setIcon(new ImageIcon(this.getClass().getResource("Check.png")));
-        }else{
-            Table5.setIcon(new ImageIcon(this.getClass().getResource("Error.png")));
-        }
-        
-        if(tableE[5].equals("true")){
-            Table6.setIcon(new ImageIcon(this.getClass().getResource("Check.png")));
-        }else{
-            Table6.setIcon(new ImageIcon(this.getClass().getResource("Error.png")));
-        }
-        
-        if(tableE[6].equals("true")){
-            Table7.setIcon(new ImageIcon(this.getClass().getResource("Check.png")));
-        }else{
-            Table7.setIcon(new ImageIcon(this.getClass().getResource("Error.png")));
-        }
-        
-        
-        if(tableE[7].equals("true")){
-            Table8.setIcon(new ImageIcon(this.getClass().getResource("Check.png")));
-        }else{
-            Table8.setIcon(new ImageIcon(this.getClass().getResource("Error.png")));
-        }
-        
-        if(tableE[8].equals("true")){
-            Table9.setIcon(new ImageIcon(this.getClass().getResource("Check.png")));
-        }else{
-            Table9.setIcon(new ImageIcon(this.getClass().getResource("Error.png")));
-        }
-        
-        if(tableE[9].equals("true")){
-            Table10.setIcon(new ImageIcon(this.getClass().getResource("Check.png")));
-        }else{
-            Table10.setIcon(new ImageIcon(this.getClass().getResource("Error.png")));
-        }
-        
-        if(tableE[10].equals("true")){
-            Table11.setIcon(new ImageIcon(this.getClass().getResource("Check.png")));
-        }else{
-            Table11.setIcon(new ImageIcon(this.getClass().getResource("Error.png")));
-        }
-        
-        if(tableE[11].equals("true")){
-            Table12.setIcon(new ImageIcon(this.getClass().getResource("Check.png")));
-        }else{
-            Table12.setIcon(new ImageIcon(this.getClass().getResource("Error.png")));
-        }
-        db.disconnect();
+        dt.upTable(tableE, Table2, Table3, Table1, Table4, Table5, Table6, Table7, Table8, Table9, Table10, Table11, Table12);
     }
 
     public int getCurrentTable(){
@@ -133,6 +54,7 @@ public class BillTable extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jSplitPane1 = new javax.swing.JSplitPane();
         Table3 = new javax.swing.JToggleButton();
         Table2 = new javax.swing.JToggleButton();
         Table5 = new javax.swing.JToggleButton();
@@ -163,7 +85,7 @@ public class BillTable extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Table3);
-        Table3.setBounds(110, 360, 30, 30);
+        Table3.setBounds(230, 160, 30, 30);
 
         Table2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
         Table2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -172,7 +94,7 @@ public class BillTable extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Table2);
-        Table2.setBounds(110, 300, 30, 30);
+        Table2.setBounds(100, 120, 30, 30);
 
         Table5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
         Table5.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -181,7 +103,7 @@ public class BillTable extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Table5);
-        Table5.setBounds(190, 340, 30, 30);
+        Table5.setBounds(440, 80, 30, 30);
 
         Table1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Check.png"))); // NOI18N
         Table1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -195,7 +117,7 @@ public class BillTable extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Table1);
-        Table1.setBounds(110, 230, 30, 30);
+        Table1.setBounds(70, 240, 30, 30);
 
         Table12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
         Table12.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -204,7 +126,7 @@ public class BillTable extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Table12);
-        Table12.setBounds(490, 320, 30, 30);
+        Table12.setBounds(480, 170, 30, 30);
 
         Table4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
         Table4.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -213,7 +135,7 @@ public class BillTable extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Table4);
-        Table4.setBounds(190, 270, 30, 30);
+        Table4.setBounds(340, 80, 30, 30);
 
         Table6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
         Table6.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -222,7 +144,7 @@ public class BillTable extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Table6);
-        Table6.setBounds(270, 270, 30, 30);
+        Table6.setBounds(540, 80, 30, 30);
 
         Table7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
         Table7.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -231,7 +153,7 @@ public class BillTable extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Table7);
-        Table7.setBounds(270, 330, 30, 30);
+        Table7.setBounds(570, 150, 30, 30);
 
         Table8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
         Table8.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -240,7 +162,7 @@ public class BillTable extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Table8);
-        Table8.setBounds(270, 420, 30, 30);
+        Table8.setBounds(570, 260, 30, 30);
 
         Table9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
         Table9.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -254,7 +176,7 @@ public class BillTable extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Table9);
-        Table9.setBounds(380, 270, 30, 30);
+        Table9.setBounds(470, 260, 30, 30);
 
         Table10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
         Table10.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -263,7 +185,7 @@ public class BillTable extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Table10);
-        Table10.setBounds(380, 330, 30, 30);
+        Table10.setBounds(370, 260, 30, 30);
 
         Table11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
         Table11.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -272,32 +194,37 @@ public class BillTable extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Table11);
-        Table11.setBounds(380, 400, 30, 30);
+        Table11.setBounds(370, 170, 30, 30);
 
         doneButton.setBackground(new java.awt.Color(255, 204, 204));
         doneButton.setForeground(new java.awt.Color(51, 51, 51));
         doneButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/girl.png"))); // NOI18N
         doneButton.setToolTipText("");
+        doneButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                doneButtonMouseClicked(evt);
+            }
+        });
         doneButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 doneButtonActionPerformed(evt);
             }
         });
         getContentPane().add(doneButton);
-        doneButton.setBounds(580, 480, 169, 75);
+        doneButton.setBounds(600, 500, 169, 75);
 
         DoneButtom1.setBackground(new java.awt.Color(255, 255, 255));
         DoneButtom1.setFont(new java.awt.Font("Perpetua", 1, 18)); // NOI18N
         DoneButtom1.setText("BACK");
-        DoneButtom1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DoneButtom1ActionPerformed(evt);
+        DoneButtom1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                DoneButtom1MouseClicked(evt);
             }
         });
         getContentPane().add(DoneButtom1);
-        DoneButtom1.setBounds(20, 550, 90, 29);
+        DoneButtom1.setBounds(20, 540, 90, 29);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/R.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/12.png"))); // NOI18N
         getContentPane().add(jLabel2);
         jLabel2.setBounds(10, 30, 610, 550);
 
@@ -314,19 +241,19 @@ public class BillTable extends javax.swing.JFrame {
     private void Table3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Table3MouseClicked
         System.out.println(db.connect());
         currentTable = tableNo = 3;
-        String setFalse = "UPDATE `RESTAURANT_Table`" + "SET isEmpty = '" + false + "' WHERE RESTAURANT_Table.No = " + tableNo;
-        String setTrue = "UPDATE `RESTAURANT_Table`" + "SET isEmpty = '" + true + "' WHERE RESTAURANT_Table.No = " + tableNo ;
+        String setFalse = "UPDATE `RESTAURANT_Table`" + "SET isEmpty = '" + 0 + "' WHERE RESTAURANT_Table.No = " + tableNo;
+        String setTrue = "UPDATE `RESTAURANT_Table`" + "SET isEmpty = '" + 1 + "' WHERE RESTAURANT_Table.No = " + tableNo ;
         Image imgoff = new ImageIcon(this.getClass().getResource("Error.png")).getImage();
         Image imgon = new ImageIcon(this.getClass().getResource("Check.png")).getImage();
 
         if(Table3.isSelected()){
             Table3.setIcon(new ImageIcon(imgoff));
             db.executeQuery(setFalse);
-            JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
+            
         }else{
             Table3.setIcon(new ImageIcon(imgon));
             db.executeQuery(setTrue);
-            JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
+            
         }
         System.out.println(db.connect());
     }//GEN-LAST:event_Table3MouseClicked
@@ -343,11 +270,11 @@ public class BillTable extends javax.swing.JFrame {
         if(Table2.isSelected()){
             Table2.setIcon(new ImageIcon(imgoff));
             db.executeQuery(setFalse);
-            JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
+            
         }else{
             Table2.setIcon(new ImageIcon(imgon));
             db.executeQuery(setTrue);
-            JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
+           
         }
         System.out.println(db.disconnect());
     }//GEN-LAST:event_Table2MouseClicked
@@ -363,11 +290,11 @@ public class BillTable extends javax.swing.JFrame {
         if(Table5.isSelected()){
             Table5.setIcon(new ImageIcon(imgoff));
             db.executeQuery(setFalse);
-           JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
+          
         }else{
             Table5.setIcon(new ImageIcon(imgon));
             db.executeQuery(setTrue);
-            JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
+            
         }
         System.out.println(db.disconnect());
     }//GEN-LAST:event_Table5MouseClicked
@@ -384,11 +311,11 @@ public class BillTable extends javax.swing.JFrame {
         if(Table1.isSelected()){
             Table1.setIcon(new ImageIcon(imgoff));
             db.executeQuery(setFalse);
-           JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
+           
         }else{
             Table1.setIcon(new ImageIcon(imgon));
             db.executeQuery(setTrue);
-            JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
+           
         }
         System.out.println(db.disconnect());
     }//GEN-LAST:event_Table1MouseClicked
@@ -405,11 +332,11 @@ public class BillTable extends javax.swing.JFrame {
         if(Table12.isSelected()){
             Table12.setIcon(new ImageIcon(imgoff));
             db.executeQuery(setFalse);
-             JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
+             
         }else{
             Table12.setIcon(new ImageIcon(imgon));
             db.executeQuery(setTrue);
-            JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
+            
         }
         System.out.println(db.disconnect());
     }//GEN-LAST:event_Table12MouseClicked
@@ -426,11 +353,11 @@ public class BillTable extends javax.swing.JFrame {
         if(Table4.isSelected()){
             Table4.setIcon(new ImageIcon(imgoff));
             db.executeQuery(setFalse);
-           JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
+          
         }else{
             Table4.setIcon(new ImageIcon(imgon));
             db.executeQuery(setTrue);
-           JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
+        
         }
         System.out.println(db.disconnect());
     }//GEN-LAST:event_Table4MouseClicked
@@ -447,11 +374,11 @@ public class BillTable extends javax.swing.JFrame {
         if(Table6.isSelected()){
             Table6.setIcon(new ImageIcon(imgoff));
             db.executeQuery(setFalse);
-            JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
+           
         }else{
             Table6.setIcon(new ImageIcon(imgon));
             db.executeQuery(setTrue);
-            JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
+            
         }
         System.out.println(db.disconnect());
     }//GEN-LAST:event_Table6MouseClicked
@@ -468,11 +395,11 @@ public class BillTable extends javax.swing.JFrame {
         if(Table7.isSelected()){
             Table7.setIcon(new ImageIcon(imgoff));
             db.executeQuery(setFalse);
-            JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
+            
         }else{
             Table7.setIcon(new ImageIcon(imgon));
             db.executeQuery(setTrue);
-           JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
+          
         }
         System.out.println(db.disconnect());
     }//GEN-LAST:event_Table7MouseClicked
@@ -489,11 +416,11 @@ public class BillTable extends javax.swing.JFrame {
         if(Table8.isSelected()){
             Table8.setIcon(new ImageIcon(imgoff));
             db.executeQuery(setFalse);
-           JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
+          
         }else{
             Table8.setIcon(new ImageIcon(imgon));
             db.executeQuery(setTrue);
-            JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
+            
         }
         System.out.println(db.disconnect());
     }//GEN-LAST:event_Table8MouseClicked
@@ -510,11 +437,11 @@ public class BillTable extends javax.swing.JFrame {
         if(Table9.isSelected()){
             Table9.setIcon(new ImageIcon(imgoff));
             db.executeQuery(setFalse);
-           JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
+           
         }else{
             Table9.setIcon(new ImageIcon(imgon));
             db.executeQuery(setTrue);
-            JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
+           
         }
         System.out.println(db.disconnect());
     }//GEN-LAST:event_Table9MouseClicked
@@ -531,11 +458,11 @@ public class BillTable extends javax.swing.JFrame {
         if(Table10.isSelected()){
             Table10.setIcon(new ImageIcon(imgoff));
             db.executeQuery(setFalse);
-           JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
+         
         }else{
             Table10.setIcon(new ImageIcon(imgon));
             db.executeQuery(setTrue);
-           JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
+          
         }
         System.out.println(db.disconnect());
     }//GEN-LAST:event_Table10MouseClicked
@@ -552,17 +479,17 @@ public class BillTable extends javax.swing.JFrame {
         if(Table11.isSelected()){
             Table11.setIcon(new ImageIcon(imgoff));
             db.executeQuery(setFalse);
-            JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
+            
         }else{
             Table11.setIcon(new ImageIcon(imgon));
             db.executeQuery(setTrue);
-            JOptionPane.showMessageDialog(null, "Table selected", "Make a wish",JOptionPane.INFORMATION_MESSAGE);
+           
         }
         System.out.println(db.disconnect());
     }//GEN-LAST:event_Table11MouseClicked
 
     private void doneButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_doneButtonActionPerformed
-        this.setVisible(false);
+        
     }//GEN-LAST:event_doneButtonActionPerformed
 
     private void Table1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Table1ActionPerformed
@@ -573,13 +500,31 @@ public class BillTable extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Table9ActionPerformed
 
-    private void DoneButtom1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DoneButtom1ActionPerformed
+    private void doneButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_doneButtonMouseClicked
+        // TODO add your handling code here:
+//        System.out.println(db.connect());
+//        String sql = "UPDATE RESTAURANT_Table SET isEmpty=" + 1 + ",cost=" + 0 + " WHERE No= " + currentTable;
+//        db.executeQuery(sql);
         dispose();
-        Billing1 bill = new Billing1();
-        bill.setVisible(true);
+//        Function1  qq = new Function1();
+//        qq.setVisible(true);
+//        JOptionPane.showMessageDialog(this, "Thank You" ,"Make a wish",JOptionPane.INFORMATION_MESSAGE);
+           
+//        this.setVisible(false);
+//        new Billing2().setVisible(true);
+  
+      Billing2 f = new Billing2();
+        f.setVisible(true);
+        
+        
+    }//GEN-LAST:event_doneButtonMouseClicked
 
-        JOptionPane.showMessageDialog(this, "select table" ,"Make a wish",JOptionPane.INFORMATION_MESSAGE);
-    }//GEN-LAST:event_DoneButtom1ActionPerformed
+    private void DoneButtom1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DoneButtom1MouseClicked
+        // TODO add your handling code here:
+     
+        this.setVisible(false);
+        new Billing1().setVisible(true);
+    }//GEN-LAST:event_DoneButtom1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -633,5 +578,13 @@ public class BillTable extends javax.swing.JFrame {
     private javax.swing.JButton doneButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JSplitPane jSplitPane1;
     // End of variables declaration//GEN-END:variables
 }
+
+
+//class Bill12 extends JToggleButton{
+//    public Bill12(int table){
+//        this.table = tableNo;
+//    }
+//}

@@ -5,6 +5,10 @@
  */
 package restaurantprojectg6;
 
+import edu.sit.cs.db.CSDbDelegate;
+import java.util.ArrayList;
+import java.util.HashMap;
+
 /**
  *
  * @author pim
@@ -30,12 +34,12 @@ public class BackLog extends javax.swing.JFrame {
 
         popFood = new javax.swing.JLabel();
         noCustomer = new javax.swing.JLabel();
-        NumCustxt2 = new javax.swing.JTextField();
         DoneButtom2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        NumCusTxt1 = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -55,13 +59,6 @@ public class BackLog extends javax.swing.JFrame {
         noCustomer.setText("Number of Customer");
         getContentPane().add(noCustomer, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 310, 290, 80));
 
-        NumCustxt2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NumCustxt2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(NumCustxt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 220, 300, 40));
-
         DoneButtom2.setBackground(new java.awt.Color(255, 255, 255));
         DoneButtom2.setFont(new java.awt.Font("Adobe Caslon Pro", 1, 18)); // NOI18N
         DoneButtom2.setText("BACK");
@@ -75,13 +72,6 @@ public class BackLog extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/cakey.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 170, 390));
 
-        NumCusTxt1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NumCusTxt1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(NumCusTxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 330, 200, 40));
-
         jLabel4.setFont(new java.awt.Font("#TS  Malee Normal", 0, 55)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Backlog");
@@ -90,6 +80,16 @@ public class BackLog extends javax.swing.JFrame {
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/head1.png"))); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, 650, 80));
+
+        jLabel5.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 0));
+        jLabel5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 220, 230, 40));
+
+        jLabel6.setFont(new java.awt.Font("Lucida Grande", 0, 36)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 0));
+        jLabel6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 330, 190, 40));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/bg2.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
@@ -102,14 +102,6 @@ public class BackLog extends javax.swing.JFrame {
         Function1 f = new Function1();
         f.setVisible(true);
     }//GEN-LAST:event_DoneButtom2ActionPerformed
-
-    private void NumCustxt2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumCustxt2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_NumCustxt2ActionPerformed
-
-    private void NumCusTxt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumCusTxt1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_NumCusTxt1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -125,15 +117,50 @@ public class BackLog extends javax.swing.JFrame {
             }
         });
     }
+    
+    public void setPop(){
+        CSDbDelegate db = new CSDbDelegate("csprog-in.sit.kmutt.ac.th", "3306", "CSC105_G6", "csc105_2014", "csc105");
+        System.out.println(db.connect());
+        String sql = "select foodName from RESTAURANT_Food where count in (select max(count) from RESTAURANT_Food)";
+
+        ArrayList<HashMap> pop = db.queryRows(sql);
+
+        for (HashMap p : pop) {
+            jLabel5.setText((String)p.get("foodName"));
+        }
+        
+        db.disconnect();
+       
+        System.out.println(sql);
+    }
+    
+    public void setCus(){
+        CSDbDelegate db = new CSDbDelegate("csprog-in.sit.kmutt.ac.th", "3306", "CSC105_G6", "csc105_2014", "csc105");
+        System.out.println(db.connect());
+        String sql = "select COUNT(no) from RESTAURANT_CustomerInfo";
+
+        ArrayList<HashMap> pop = db.queryRows(sql);
+
+        for (HashMap p : pop) {
+            jLabel6.setText((String)p.get("COUNT(no)"));
+        }
+        
+        db.disconnect();
+       
+        System.out.println(sql);
+    }
+    
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton DoneButtom2;
-    private javax.swing.JTextField NumCusTxt1;
-    private javax.swing.JTextField NumCustxt2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel noCustomer;
     private javax.swing.JLabel popFood;
     // End of variables declaration//GEN-END:variables
