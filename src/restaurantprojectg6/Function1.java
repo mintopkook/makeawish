@@ -144,6 +144,8 @@ public class Function1 extends javax.swing.JFrame {
         dispose();
         BackLog blg = new BackLog();
         blg.setVisible(true);
+        blg.setPop();
+        blg.setCus();
     }//GEN-LAST:event_backlogActionPerformed
 
     /**

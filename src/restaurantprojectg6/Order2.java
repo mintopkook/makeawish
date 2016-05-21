@@ -25,11 +25,26 @@ public class Order2 extends javax.swing.JFrame {
     int countCoke = 0, countCake = 0, countPepsi = 0, countSpa = 0, countRamen = 0, countCupcake = 0;
     static CSDbDelegate db = new CSDbDelegate("csprog-in.sit.kmutt.ac.th", "3306", "CSC105_G6", "csc105_2014", "csc105");
     
+    FoodOrder fo = new FoodOrder();
+    
+    Table tt = new Table();
+    
     public Order2() {
         initComponents();
         setSize(800,600);
         tableLabel.setText("Table " + q.getTable().getCurrentTable());
     }
+    
+//    public void addDb(){
+//        System.out.println(db.connect());
+//        String updateTable = "UPDATE RESTAURANT_CustomerInfo SET TableNo = '" + tt.currentTable + "' WHERE RESTAURANT_CustomerInfo.no = 'MAX(no)' ";
+//        db.executeQuery(updateTable);
+//        
+//         System.out.println(db.disconnect());
+//        dispose();
+//        
+//    
+//}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -51,7 +66,6 @@ public class Order2 extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         tableLabel = new javax.swing.JLabel();
         total = new javax.swing.JLabel();
-        notable = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         cake = new javax.swing.JButton();
         ramen = new javax.swing.JButton();
@@ -93,6 +107,11 @@ public class Order2 extends javax.swing.JFrame {
         getContentPane().add(priceLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 120, -1));
 
         back.setText("Back");
+        back.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                backMouseClicked(evt);
+            }
+        });
         back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backActionPerformed(evt);
@@ -123,15 +142,16 @@ public class Order2 extends javax.swing.JFrame {
         tableLabel.setFont(new java.awt.Font("Perpetua", 0, 24)); // NOI18N
         tableLabel.setForeground(new java.awt.Color(255, 255, 204));
         tableLabel.setText("Table: ");
-        getContentPane().add(tableLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 70, 60));
+        tableLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tableLabelMouseClicked(evt);
+            }
+        });
+        getContentPane().add(tableLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 130, 60));
 
         total.setForeground(new java.awt.Color(255, 255, 0));
         total.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 153, 153)));
         getContentPane().add(total, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 370, 90, 30));
-
-        notable.setForeground(new java.awt.Color(255, 255, 204));
-        notable.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 153, 153)));
-        getContentPane().add(notable, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, 60, 40));
 
         jPanel2.setLayout(new java.awt.GridLayout(1, 0));
 
@@ -220,94 +240,51 @@ public class Order2 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void cokeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cokeActionPerformed
-        foodName = "Coke";
-        foodPrice = 15;
-        
-        Object[] row = { foodName, foodPrice };
-
-        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-
-        model.addRow(row);
-        price += foodPrice;
-        countCoke++;
-        priceLabel.setText("Total price: ");
-        total.setText(price+"");
+        fo.orderCoke(foodName, foodPrice, jTable1, countCoke, priceLabel, total);
+        //priceLabel.setText("Total price: ");
+        total.setText(fo.price+"");
     }//GEN-LAST:event_cokeActionPerformed
 
+
+    
     private void pepsiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pepsiActionPerformed
-        foodName = "Pepsi";
-        foodPrice = 15;
-        
-        Object[] row = { foodName, foodPrice };
-
-        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-
-        model.addRow(row);
-        price += foodPrice;
-        countPepsi++;
-        priceLabel.setText("Total price: ");
-        total.setText(price+"");
+        fo.orderPep(foodName, foodPrice, jTable1, countPepsi, priceLabel, total);
+        //priceLabel.setText("Total price: ");
+        total.setText(fo.price+"");
     }//GEN-LAST:event_pepsiActionPerformed
 
+    
+   
     private void cupcakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cupcakeActionPerformed
-        foodName = "Cupcake";
-        foodPrice = 40;
-        
-        Object[] row = { foodName, foodPrice };
-
-        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-
-        model.addRow(row);
-        price += foodPrice;
-        countCupcake++;
-        priceLabel.setText("Total price: ");
-        total.setText(price+"");
+        fo.orderCup(foodName, foodPrice, jTable1, countCupcake, priceLabel, total);
+        //priceLabel.setText("Total price: ");
+        total.setText(fo.price+"");
     }//GEN-LAST:event_cupcakeActionPerformed
 
+    
+
     private void cakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cakeActionPerformed
-        foodName = "Cake";
-        foodPrice = 70;
-        
-        Object[] row = { foodName, foodPrice };
-
-        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-
-        model.addRow(row);
-        price += foodPrice;
-        countCake++;
-        priceLabel.setText("Total price: ");
-        total.setText(price+"");
+        fo.orderCake(foodName, foodPrice, jTable1, countCake, priceLabel, total);
+        //priceLabel.setText("Total price: ");
+       
+        total.setText(fo.price+"");
     }//GEN-LAST:event_cakeActionPerformed
 
+
     private void spaghettiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_spaghettiActionPerformed
-        foodName = "Spaghetti";
-        foodPrice = 120;
-        
-        Object[] row = { foodName, foodPrice };
-
-        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-
-        model.addRow(row);
-        price += foodPrice;
-        countSpa++;
+        fo.orderSpa(foodName, foodPrice, jTable1, countSpa, priceLabel, total);
         priceLabel.setText("Total price: ");
-        total.setText(price+"");
+        total.setText(fo.price+"");
     }//GEN-LAST:event_spaghettiActionPerformed
 
+    
     private void ramenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ramenActionPerformed
-        foodName = "Ramen";
-        foodPrice = 100;
-        
-        Object[] row = { foodName, foodPrice };
-
-        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-
-        model.addRow(row);
-        price += foodPrice;
-        countRamen++;
+        fo.orderRa(foodName, foodPrice, jTable1, countRamen, priceLabel, total);
         priceLabel.setText("Total price: ");
-        total.setText(price+"");
+        total.setText(fo.price+"");
     }//GEN-LAST:event_ramenActionPerformed
+
+    
 
     private void clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearActionPerformed
         // TODO add your handling code here:
@@ -316,10 +293,11 @@ public class Order2 extends javax.swing.JFrame {
         countCoke = 0; countCake = 0; countPepsi = 0; countSpa = 0; countRamen = 0; countCupcake = 0; price = 0;
         priceLabel.setText("Total price: ");
         total.setText("");
+        fo.price = 0;
     }//GEN-LAST:event_clearActionPerformed
 
     private void doneButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_doneButtonActionPerformed
-        System.out.println(db.connect());
+         System.out.println(db.connect());
         String getCoke = "SELECT count FROM RESTAURANT_Food WHERE RESTAURANT_Food.foodName = 'Coke' ";
         HashMap cCount = db.queryRow(getCoke);
         int cokeCount = Integer.parseInt((String)(cCount.get("count")));
@@ -362,7 +340,7 @@ public class Order2 extends javax.swing.JFrame {
         String updateSpa = "UPDATE RESTAURANT_Food SET count = '" + (spaCount+countSpa) + "' WHERE RESTAURANT_Food.foodName = 'Spaghetti' ";
         db.executeQuery(updateSpa);
         
-        String updatePrice = "UPDATE RESTAURANT_Table SET cost = " + price + " WHERE RESTAURANT_Table.No = " + q.getTable().getCurrentTable();
+        String updatePrice = "UPDATE RESTAURANT_Table SET cost = " + fo.price + " WHERE RESTAURANT_Table.No = " + q.getTable().getCurrentTable();
         db.executeQuery(updatePrice);
         System.out.println(db.disconnect());
         dispose();
@@ -370,9 +348,18 @@ public class Order2 extends javax.swing.JFrame {
     }//GEN-LAST:event_doneButtonActionPerformed
 
     private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
-        Queue1 que = new Queue1();
-        que.setVisible(true);
+       
     }//GEN-LAST:event_backActionPerformed
+
+    private void backMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backMouseClicked
+        // TODO add your handling code here:
+        Table tab = new Table();
+        tab.setVisible(true);
+    }//GEN-LAST:event_backMouseClicked
+
+    private void tableLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableLabelMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tableLabelMouseClicked
 
     /**
      * @param args the command line arguments
@@ -424,7 +411,6 @@ public class Order2 extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JLabel notable;
     private javax.swing.JButton pepsi;
     private javax.swing.JLabel priceLabel;
     private javax.swing.JButton ramen;
