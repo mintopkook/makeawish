@@ -12,6 +12,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.HashMap;
 import javax.swing.JOptionPane;
+import javax.swing.JToggleButton;
 
 /**
  *
@@ -88,6 +89,7 @@ public class Table extends javax.swing.JFrame {
         jPanel1.setLayout(null);
 
         Table3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
+        Table3.setName("3"); // NOI18N
         Table3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Table3MouseClicked(evt);
@@ -102,6 +104,7 @@ public class Table extends javax.swing.JFrame {
         Table3.setBounds(220, 160, 30, 30);
 
         Table2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
+        Table2.setName("2"); // NOI18N
         Table2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Table2MouseClicked(evt);
@@ -111,6 +114,7 @@ public class Table extends javax.swing.JFrame {
         Table2.setBounds(90, 120, 30, 30);
 
         Table5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
+        Table5.setName("5"); // NOI18N
         Table5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Table5MouseClicked(evt);
@@ -120,6 +124,7 @@ public class Table extends javax.swing.JFrame {
         Table5.setBounds(430, 80, 30, 30);
 
         Table1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Check.png"))); // NOI18N
+        Table1.setName("1"); // NOI18N
         Table1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Table1MouseClicked(evt);
@@ -134,6 +139,7 @@ public class Table extends javax.swing.JFrame {
         Table1.setBounds(60, 240, 30, 30);
 
         Table12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
+        Table12.setName("12"); // NOI18N
         Table12.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Table12MouseClicked(evt);
@@ -148,6 +154,7 @@ public class Table extends javax.swing.JFrame {
         Table12.setBounds(460, 170, 30, 30);
 
         Table4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
+        Table4.setName("4"); // NOI18N
         Table4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Table4MouseClicked(evt);
@@ -162,6 +169,7 @@ public class Table extends javax.swing.JFrame {
         Table4.setBounds(330, 80, 30, 30);
 
         Table6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
+        Table6.setName("6"); // NOI18N
         Table6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Table6MouseClicked(evt);
@@ -171,6 +179,7 @@ public class Table extends javax.swing.JFrame {
         Table6.setBounds(540, 80, 30, 30);
 
         Table7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
+        Table7.setName("7"); // NOI18N
         Table7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Table7MouseClicked(evt);
@@ -185,6 +194,7 @@ public class Table extends javax.swing.JFrame {
         Table7.setBounds(560, 150, 30, 30);
 
         Table8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
+        Table8.setName("8"); // NOI18N
         Table8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Table8MouseClicked(evt);
@@ -194,6 +204,7 @@ public class Table extends javax.swing.JFrame {
         Table8.setBounds(570, 260, 30, 30);
 
         Table9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
+        Table9.setName("9"); // NOI18N
         Table9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Table9MouseClicked(evt);
@@ -203,6 +214,7 @@ public class Table extends javax.swing.JFrame {
         Table9.setBounds(460, 260, 30, 30);
 
         Table10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
+        Table10.setName("10"); // NOI18N
         Table10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Table10MouseClicked(evt);
@@ -217,9 +229,15 @@ public class Table extends javax.swing.JFrame {
         Table10.setBounds(360, 260, 30, 30);
 
         Table11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
+        Table11.setName("11"); // NOI18N
         Table11.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Table11MouseClicked(evt);
+            }
+        });
+        Table11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Table11ActionPerformed(evt);
             }
         });
         jPanel1.add(Table11);
@@ -294,281 +312,91 @@ public class Table extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
     
-    
-    private void Table3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Table3MouseClicked
+    public int TableClick(java.awt.event.MouseEvent evt){
         System.out.println(db.connect());
-        currentTable = tableNo = 3;
+        JToggleButton button = (JToggleButton)(evt.getSource());
+        currentTable = tableNo = Integer.parseInt(button.getName());
         String setFalse = "UPDATE `RESTAURANT_Table`" + "SET isEmpty = '" + false + "' WHERE RESTAURANT_Table.No = " + tableNo;
         String setTrue = "UPDATE `RESTAURANT_Table`" + "SET isEmpty = '" + true + "' WHERE RESTAURANT_Table.No = " + tableNo ;
         Image imgoff = new ImageIcon(this.getClass().getResource("Error.png")).getImage();
         Image imgon = new ImageIcon(this.getClass().getResource("Check.png")).getImage();
         
-        if(Table3.isSelected()){
-            Table3.setIcon(new ImageIcon(imgoff));
+        if(button.isSelected()){
+            button.setIcon(new ImageIcon(imgoff));
             isEmpty = false;
             db.executeQuery(setFalse);
             JOptionPane.showMessageDialog(null, "Table selected");
             
+            
         }else{
-            Table3.setIcon(new ImageIcon(imgon));
+            button.setIcon(new ImageIcon(imgon));
             isEmpty = true;
             db.executeQuery(setTrue);
             JOptionPane.showMessageDialog(null, "Table deselected");
+            
         }
         System.out.println(db.disconnect());
+        return currentTable;
+    }
+    private void Table3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Table3MouseClicked
+        TableClick(evt);
+        
     }//GEN-LAST:event_Table3MouseClicked
 
     private void Table5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Table5MouseClicked
-
-        System.out.println(db.connect());
-        currentTable = tableNo = 5;
-        String setFalse = "UPDATE `RESTAURANT_Table`" + "SET isEmpty = '" + false + "' WHERE RESTAURANT_Table.No = " + tableNo;
-        String setTrue = "UPDATE `RESTAURANT_Table`" + "SET isEmpty = '" + true + "' WHERE RESTAURANT_Table.No = " + tableNo ;
-        Image imgoff = new ImageIcon(this.getClass().getResource("Error.png")).getImage();
-        Image imgon = new ImageIcon(this.getClass().getResource("Check.png")).getImage();
+        TableClick(evt);
         
-        if(Table5.isSelected()){
-            Table5.setIcon(new ImageIcon(imgoff));
-            isEmpty = false;
-            db.executeQuery(setFalse);
-            JOptionPane.showMessageDialog(null, "Table selected");
-        }else{
-            Table5.setIcon(new ImageIcon(imgon));
-            isEmpty = true;
-            db.executeQuery(setTrue);
-            JOptionPane.showMessageDialog(null, "Table deselected");
-        }
-        System.out.println(db.disconnect());
     }//GEN-LAST:event_Table5MouseClicked
 
     private void Table2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Table2MouseClicked
-        // TODO add your handling code here:
-        System.out.println(db.connect());
-        currentTable = tableNo = 2;
-        String setFalse = "UPDATE `RESTAURANT_Table`" + "SET isEmpty = '" + false + "' WHERE RESTAURANT_Table.No = " + tableNo;
-        String setTrue = "UPDATE `RESTAURANT_Table`" + "SET isEmpty = '" + true + "' WHERE RESTAURANT_Table.No = " + tableNo ;
-        Image imgoff = new ImageIcon(this.getClass().getResource("Error.png")).getImage();
-        Image imgon = new ImageIcon(this.getClass().getResource("Check.png")).getImage();
-        
-        if(Table2.isSelected()){
-            Table2.setIcon(new ImageIcon(imgoff));
-            isEmpty = false;
-            db.executeQuery(setFalse);
-            JOptionPane.showMessageDialog(null, "Table selected");
-        }else{
-            Table2.setIcon(new ImageIcon(imgon));
-            isEmpty = true;
-            db.executeQuery(setTrue);
-            JOptionPane.showMessageDialog(null, "Table deselected");
-        }
-        System.out.println(db.disconnect());
+        TableClick(evt);
+
     }//GEN-LAST:event_Table2MouseClicked
 
     private void Table1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Table1MouseClicked
-        // TODO add your handling code here:
-        System.out.println(db.connect());
-        currentTable = tableNo = 1;
-        String setFalse = "UPDATE `RESTAURANT_Table`" + "SET isEmpty = '" + false + "' WHERE RESTAURANT_Table.No = " + tableNo;
-        String setTrue = "UPDATE `RESTAURANT_Table`" + "SET isEmpty = '" + true + "' WHERE RESTAURANT_Table.No = " + tableNo ;
-        Image imgoff = new ImageIcon(this.getClass().getResource("Error.png")).getImage();
-        Image imgon = new ImageIcon(this.getClass().getResource("Check.png")).getImage();
+        TableClick(evt);// TODO add your handling code here:
         
-        if(Table1.isSelected()){
-            Table1.setIcon(new ImageIcon(imgoff));
-            isEmpty = false;
-            db.executeQuery(setFalse);
-            JOptionPane.showMessageDialog(null, "Table selected");
-        }else{
-            Table1.setIcon(new ImageIcon(imgon));
-            isEmpty = true;
-            db.executeQuery(setTrue);
-            JOptionPane.showMessageDialog(null, "Table deselected");
-        }
-        System.out.println(db.disconnect());
     }//GEN-LAST:event_Table1MouseClicked
 
     private void Table12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Table12MouseClicked
-        // TODO add your handling code here:
-        System.out.println(db.connect());
-        currentTable = tableNo = 12;
-        String setFalse = "UPDATE `RESTAURANT_Table`" + "SET isEmpty = '" + false + "' WHERE RESTAURANT_Table.No = " + tableNo;
-        String setTrue = "UPDATE `RESTAURANT_Table`" + "SET isEmpty = '" + true + "' WHERE RESTAURANT_Table.No = " + tableNo ;
-        Image imgoff = new ImageIcon(this.getClass().getResource("Error.png")).getImage();
-        Image imgon = new ImageIcon(this.getClass().getResource("Check.png")).getImage();
+        TableClick(evt);// TODO add your handling code here:
         
-        if(Table12.isSelected()){
-            Table12.setIcon(new ImageIcon(imgoff));
-            isEmpty = false;
-            db.executeQuery(setFalse);
-            JOptionPane.showMessageDialog(null, "Table selected");
-        }else{
-            Table12.setIcon(new ImageIcon(imgon));
-            isEmpty = true;
-            db.executeQuery(setTrue);
-            JOptionPane.showMessageDialog(null, "Table deselected");
-        }
-        System.out.println(db.disconnect());
     }//GEN-LAST:event_Table12MouseClicked
 
     private void Table4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Table4MouseClicked
-        // TODO add your handling code here:
-        System.out.println(db.connect());
-        currentTable = tableNo = 4;
-        String setFalse = "UPDATE `RESTAURANT_Table`" + "SET isEmpty = '" + false + "' WHERE RESTAURANT_Table.No = " + tableNo;
-        String setTrue = "UPDATE `RESTAURANT_Table`" + "SET isEmpty = '" + true + "' WHERE RESTAURANT_Table.No = " + tableNo ;
-        Image imgoff = new ImageIcon(this.getClass().getResource("Error.png")).getImage();
-        Image imgon = new ImageIcon(this.getClass().getResource("Check.png")).getImage();
-        
-        if(Table4.isSelected()){
-            Table4.setIcon(new ImageIcon(imgoff));
-            isEmpty = false;
-            db.executeQuery(setFalse);
-            JOptionPane.showMessageDialog(null, "Table selected");
-        }else{
-            Table4.setIcon(new ImageIcon(imgon));
-            isEmpty = true;
-            db.executeQuery(setTrue);
-            JOptionPane.showMessageDialog(null, "Table deselected");
-        } 
-        System.out.println(db.disconnect());
+        TableClick(evt);// TODO add your handling code here:
+       
     }//GEN-LAST:event_Table4MouseClicked
 
     private void Table6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Table6MouseClicked
-        // TODO add your handling code here:
-        System.out.println(db.connect());
-        currentTable = tableNo = 6;
-        String setFalse = "UPDATE `RESTAURANT_Table`" + "SET isEmpty = '" + false + "' WHERE RESTAURANT_Table.No = " + tableNo;
-        String setTrue = "UPDATE `RESTAURANT_Table`" + "SET isEmpty = '" + true + "' WHERE RESTAURANT_Table.No = " + tableNo ;
-        Image imgoff = new ImageIcon(this.getClass().getResource("Error.png")).getImage();
-        Image imgon = new ImageIcon(this.getClass().getResource("Check.png")).getImage();
-        
-        if(Table6.isSelected()){
-            Table6.setIcon(new ImageIcon(imgoff));
-            isEmpty = false;
-            db.executeQuery(setFalse);
-            JOptionPane.showMessageDialog(null, "Table selected");
-        }else{
-            Table6.setIcon(new ImageIcon(imgon));
-            isEmpty = true;
-            db.executeQuery(setTrue);
-            JOptionPane.showMessageDialog(null, "Table deselected");
-        }
-        System.out.println(db.disconnect());
+        TableClick(evt);// TODO add your handling code here:
+       
     }//GEN-LAST:event_Table6MouseClicked
 
     private void Table7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Table7MouseClicked
-        // TODO add your handling code here:
-        System.out.println(db.connect());
-        currentTable = tableNo = 7;
-        String setFalse = "UPDATE `RESTAURANT_Table`" + "SET isEmpty = '" + false + "' WHERE RESTAURANT_Table.No = " + tableNo;
-        String setTrue = "UPDATE `RESTAURANT_Table`" + "SET isEmpty = '" + true + "' WHERE RESTAURANT_Table.No = " + tableNo ;
-        Image imgoff = new ImageIcon(this.getClass().getResource("Error.png")).getImage();
-        Image imgon = new ImageIcon(this.getClass().getResource("Check.png")).getImage();
+        TableClick(evt);// TODO add your handling code here:
         
-        if(Table7.isSelected()){
-            Table7.setIcon(new ImageIcon(imgoff));
-            isEmpty = false;
-            db.executeQuery(setFalse);
-            JOptionPane.showMessageDialog(null, "Table selected");
-        }else{
-            Table7.setIcon(new ImageIcon(imgon));
-            isEmpty = true;
-            db.executeQuery(setTrue);
-            JOptionPane.showMessageDialog(null, "Table deselected");
-        }
-        System.out.println(db.disconnect());
     }//GEN-LAST:event_Table7MouseClicked
 
     private void Table8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Table8MouseClicked
-        // TODO add your handling code here:
-        System.out.println(db.connect());
-        currentTable = tableNo = 8;
-        String setFalse = "UPDATE `RESTAURANT_Table`" + "SET isEmpty = '" + false + "' WHERE RESTAURANT_Table.No = " + tableNo;
-        String setTrue = "UPDATE `RESTAURANT_Table`" + "SET isEmpty = '" + true + "' WHERE RESTAURANT_Table.No = " + tableNo ;
-        Image imgoff = new ImageIcon(this.getClass().getResource("Error.png")).getImage();
-        Image imgon = new ImageIcon(this.getClass().getResource("Check.png")).getImage();
+        TableClick(evt);// TODO add your handling code here:
         
-        if(Table8.isSelected()){
-            Table8.setIcon(new ImageIcon(imgoff));
-            isEmpty = false;
-            db.executeQuery(setFalse);
-            JOptionPane.showMessageDialog(null, "Table selected");
-        }else{
-            Table8.setIcon(new ImageIcon(imgon));
-            isEmpty = true;
-            db.executeQuery(setTrue);
-            JOptionPane.showMessageDialog(null, "Table deselected");
-        }
-        System.out.println(db.disconnect());
     }//GEN-LAST:event_Table8MouseClicked
 
     private void Table9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Table9MouseClicked
-        // TODO add your handling code here:
-        System.out.println(db.connect());
-        currentTable = tableNo = 9;
-        String setFalse = "UPDATE `RESTAURANT_Table`" + "SET isEmpty = '" + false + "' WHERE RESTAURANT_Table.No = " + tableNo;
-        String setTrue = "UPDATE `RESTAURANT_Table`" + "SET isEmpty = '" + true + "' WHERE RESTAURANT_Table.No = " + tableNo ;
-        Image imgoff = new ImageIcon(this.getClass().getResource("Error.png")).getImage();
-        Image imgon = new ImageIcon(this.getClass().getResource("Check.png")).getImage();
-        
-        if(Table9.isSelected()){
-            Table9.setIcon(new ImageIcon(imgoff));
-            isEmpty = false;
-            db.executeQuery(setFalse);
-            JOptionPane.showMessageDialog(null, "Table selected");
-        }else{
-            Table9.setIcon(new ImageIcon(imgon));
-            isEmpty = true;
-            db.executeQuery(setTrue);
-            JOptionPane.showMessageDialog(null, "Table deselected");
-        }
-        System.out.println(db.disconnect());
+        TableClick(evt);// TODO add your handling code here:
+       
     }//GEN-LAST:event_Table9MouseClicked
 
     private void Table10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Table10MouseClicked
-        // TODO add your handling code here:
-        System.out.println(db.connect());
-        currentTable = tableNo = 10;
-        String setFalse = "UPDATE `RESTAURANT_Table`" + "SET isEmpty = '" + false + "' WHERE RESTAURANT_Table.No = " + tableNo;
-        String setTrue = "UPDATE `RESTAURANT_Table`" + "SET isEmpty = '" + true + "' WHERE RESTAURANT_Table.No = " + tableNo ;
-        Image imgoff = new ImageIcon(this.getClass().getResource("Error.png")).getImage();
-        Image imgon = new ImageIcon(this.getClass().getResource("Check.png")).getImage();
-        
-        if(Table10.isSelected()){
-            Table10.setIcon(new ImageIcon(imgoff));
-            isEmpty = false;
-            db.executeQuery(setFalse);
-            JOptionPane.showMessageDialog(null, "Table selected");
-        }else{
-            Table10.setIcon(new ImageIcon(imgon));
-            isEmpty = true;
-            db.executeQuery(setTrue);
-            JOptionPane.showMessageDialog(null, "Table deselected");
-        }
-        System.out.println(db.disconnect());
+        TableClick(evt);// TODO add your handling code here:
+      
     }//GEN-LAST:event_Table10MouseClicked
 
     private void Table11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Table11MouseClicked
         // TODO add your handling code here:
-        System.out.println(db.connect());
-        currentTable = tableNo = 11;
-        String setFalse = "UPDATE `RESTAURANT_Table`" + "SET isEmpty = '" + false + "' WHERE RESTAURANT_Table.No = " + tableNo;
-        String setTrue = "UPDATE `RESTAURANT_Table`" + "SET isEmpty = '" + true + "' WHERE RESTAURANT_Table.No = " + tableNo ;
-        Image imgoff = new ImageIcon(this.getClass().getResource("Error.png")).getImage();
-        Image imgon = new ImageIcon(this.getClass().getResource("Check.png")).getImage();
-        
-        if(Table11.isSelected()){
-            Table11.setIcon(new ImageIcon(imgoff));
-            isEmpty = false;
-            db.executeQuery(setFalse);
-            JOptionPane.showMessageDialog(null, "Table selected");
-        }else{
-            Table11.setIcon(new ImageIcon(imgon));
-            isEmpty = true;
-            db.executeQuery(setTrue);
-            JOptionPane.showMessageDialog(null, "Table deselected");
-        }
-        System.out.println(db.disconnect());
+        TableClick(evt);
+       
     }//GEN-LAST:event_Table11MouseClicked
 
     
@@ -617,6 +445,10 @@ public class Table extends javax.swing.JFrame {
     private void Table1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Table1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Table1ActionPerformed
+
+    private void Table11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Table11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Table11ActionPerformed
     
    
      public void addDb(){
