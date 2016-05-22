@@ -75,6 +75,7 @@ public class Table extends javax.swing.JFrame {
         Table10 = new javax.swing.JToggleButton();
         Table11 = new javax.swing.JToggleButton();
         jButton1 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
         DoneButtom1 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -89,7 +90,6 @@ public class Table extends javax.swing.JFrame {
         jPanel1.setLayout(null);
 
         Table3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
-        Table3.setName("3"); // NOI18N
         Table3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Table3MouseClicked(evt);
@@ -104,7 +104,6 @@ public class Table extends javax.swing.JFrame {
         Table3.setBounds(220, 160, 30, 30);
 
         Table2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
-        Table2.setName("2"); // NOI18N
         Table2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Table2MouseClicked(evt);
@@ -114,7 +113,6 @@ public class Table extends javax.swing.JFrame {
         Table2.setBounds(90, 120, 30, 30);
 
         Table5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
-        Table5.setName("5"); // NOI18N
         Table5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Table5MouseClicked(evt);
@@ -124,7 +122,6 @@ public class Table extends javax.swing.JFrame {
         Table5.setBounds(430, 80, 30, 30);
 
         Table1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Check.png"))); // NOI18N
-        Table1.setName("1"); // NOI18N
         Table1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Table1MouseClicked(evt);
@@ -139,7 +136,6 @@ public class Table extends javax.swing.JFrame {
         Table1.setBounds(60, 240, 30, 30);
 
         Table12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
-        Table12.setName("12"); // NOI18N
         Table12.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Table12MouseClicked(evt);
@@ -154,7 +150,6 @@ public class Table extends javax.swing.JFrame {
         Table12.setBounds(460, 170, 30, 30);
 
         Table4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
-        Table4.setName("4"); // NOI18N
         Table4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Table4MouseClicked(evt);
@@ -169,7 +164,6 @@ public class Table extends javax.swing.JFrame {
         Table4.setBounds(330, 80, 30, 30);
 
         Table6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
-        Table6.setName("6"); // NOI18N
         Table6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Table6MouseClicked(evt);
@@ -179,7 +173,6 @@ public class Table extends javax.swing.JFrame {
         Table6.setBounds(540, 80, 30, 30);
 
         Table7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
-        Table7.setName("7"); // NOI18N
         Table7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Table7MouseClicked(evt);
@@ -194,17 +187,15 @@ public class Table extends javax.swing.JFrame {
         Table7.setBounds(560, 150, 30, 30);
 
         Table8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
-        Table8.setName("8"); // NOI18N
         Table8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Table8MouseClicked(evt);
             }
         });
         jPanel1.add(Table8);
-        Table8.setBounds(570, 260, 30, 30);
+        Table8.setBounds(560, 260, 30, 30);
 
         Table9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
-        Table9.setName("9"); // NOI18N
         Table9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Table9MouseClicked(evt);
@@ -214,7 +205,6 @@ public class Table extends javax.swing.JFrame {
         Table9.setBounds(460, 260, 30, 30);
 
         Table10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
-        Table10.setName("10"); // NOI18N
         Table10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Table10MouseClicked(evt);
@@ -229,15 +219,9 @@ public class Table extends javax.swing.JFrame {
         Table10.setBounds(360, 260, 30, 30);
 
         Table11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
-        Table11.setName("11"); // NOI18N
         Table11.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Table11MouseClicked(evt);
-            }
-        });
-        Table11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Table11ActionPerformed(evt);
             }
         });
         jPanel1.add(Table11);
@@ -245,7 +229,7 @@ public class Table extends javax.swing.JFrame {
 
         jButton1.setBackground(new java.awt.Color(255, 204, 204));
         jButton1.setForeground(new java.awt.Color(51, 51, 51));
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Girl.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/girl.png"))); // NOI18N
         jButton1.setText("DONE");
         jButton1.setToolTipText("");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -261,6 +245,11 @@ public class Table extends javax.swing.JFrame {
         jPanel1.add(jButton1);
         jButton1.setBounds(610, 490, 150, 70);
 
+        jLabel4.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        jLabel4.setText("CUSTOMER NO");
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(650, 90, 130, 30);
+
         DoneButtom1.setBackground(new java.awt.Color(255, 255, 255));
         DoneButtom1.setFont(new java.awt.Font("Perpetua", 1, 18)); // NOI18N
         DoneButtom1.setText("BACK");
@@ -272,9 +261,10 @@ public class Table extends javax.swing.JFrame {
         jPanel1.add(DoneButtom1);
         DoneButtom1.setBounds(20, 550, 90, 29);
 
+        jLabel3.setFont(new java.awt.Font("Vani", 0, 12)); // NOI18N
         jLabel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(635, 110, 140, 40);
+        jLabel3.setBounds(660, 130, 90, 40);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/12.png"))); // NOI18N
         jPanel1.add(jLabel2);
@@ -296,7 +286,7 @@ public class Table extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jList1);
 
         jPanel1.add(jScrollPane1);
-        jScrollPane1.setBounds(980, 410, 43, 140);
+        jScrollPane1.setBounds(980, 410, 35, 130);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -544,6 +534,7 @@ public class Table extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JList jList1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
